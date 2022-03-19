@@ -5,9 +5,143 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/styles.css" rel="stylesheet">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>Index page</title>
 </head>
 <body>
-    
+    <header class="header">
+        <img src="media/logo.svg" height="48">
+        <nav>
+            <ul class="navbar">
+                <li class="navbar-item"><a class="navbar-link" href="#">Popular posts</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#">All posts</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#">More info</a></li>
+            </ul>
+        </nav> 
+    </header>
+    <main class="main">
+        <section class="hero-section">
+            <h1>AI and Cryptography</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatibus beatae consequatur quia ut vel aut laboriosam dicta quos ullam eum.</p>
+        </section>
+        <section class="main-section">
+            <section class="popular-cards">
+                <h2>Popular posts</h2>
+                <div class="cards-list">
+                    <article class="card">
+                        <div class="card-header">
+                            <img src="media/placeholder.png" width="100%">
+                        </div>
+                        <div class="card-body">
+                            <h3>Card Title</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatibus beatae consequatur quia ut
+                                vel aut
+                                laboriosam dicta quos ullam eum.</p>
+                        </div>
+                    </article>
+                    
+                    <article class="card">
+                        <div class="card-header">
+                            <img src="media/placeholder.png" width="100%">
+                        </div>
+                        <div class="card-body">
+                            <h3>Card Title</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatibus beatae consequatur quia ut
+                                vel aut
+                                laboriosam dicta quos ullam eum.</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-header">
+                            <img src="media/placeholder.png" width="100%">
+                        </div>
+                        <div class="card-body">
+                            <h3>Card Title</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatibus beatae consequatur quia ut
+                                vel aut
+                                laboriosam dicta quos ullam eum.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section class="all-cards" style="margin-bottom: 2rem;">
+                <h2>All posts</h2>
+                <article>
+                    <div style="float:left; width:20%">
+                        <img src="media/placeholder.png" width="150px">
+                    </div>
+                    <div style="float:left; width:80%">
+                        <h4 style="margin: 0 0;">A Few Thoughts on Cryptographic Engineering</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dolor rem nihil, ex vero animi, cum excepturi iusto inventore sunt itaque sequi eum eius, eaque ducimus fuga. Odio, esse culpa...</p>
+                    </div>
+                </article>
+                <article>
+                    <div style="float:left; width:20%">
+                        <img src="media/placeholder.png" width="150px">
+                    </div>
+                    <div style="float:left; width:80%">
+                        <h4 style="margin: 0 0;">A Few Thoughts on Cryptographic Engineering</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dolor rem nihil, ex vero animi, cum excepturi
+                            iusto inventore sunt itaque sequi eum eius, eaque ducimus fuga. Odio, esse culpa...</p>
+                    </div>
+                </article>
+                <article>
+                    <div style="float:left; width:20%">
+                        <img src="media/placeholder.png" width="150px">
+                    </div>
+                    <div style="float:left; width:80%">
+                        <h4 style="margin: 0 0;">A Few Thoughts on Cryptographic Engineering</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dolor rem nihil, ex vero animi, cum excepturi
+                            iusto inventore sunt itaque sequi eum eius, eaque ducimus fuga. Odio, esse culpa...</p>
+                    </div>
+                </article>
+            </section>
+        </section>
+        <aside class="sidebar">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="text-muted bold">Popular Posts</h4>
+                    <ul class="links-list">
+                        <li><a href="#">Post1</a></li>
+                        <li><a href="#">Post2</a></li>
+                        <li><a href="#">Post3</a></li>
+                    </ul>
+                    <h4 class="text-muted bold">All Posts</h4>
+                    <ul class="links-list">
+                        <li><a href="#">Post1</a></li>
+                        <li><a href="#">Post2</a></li>
+                        <li><a href="#">Post3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <footer class="footer">
+        <div>
+            <img src="media/logo.svg" height="96">
+            <p> Copyright &copy; 2022 Tous les droits sont reservés</p>
+        </div>
+        <div>
+            <h4 class="bold">Popular posts</h4>
+            <ul class="links-list">
+                <li><a href="#">Post1</a></li>
+                <li><a href="#">Post2</a></li>
+                <li><a href="#">Post3</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="bold">All Posts</h4>
+            <ul class="links-list">
+                <li><a href="#">Post1</a></li>
+                <li><a href="#">Post2</a></li>
+                <li><a href="#">Post3</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
