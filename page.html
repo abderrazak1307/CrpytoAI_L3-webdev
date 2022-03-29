@@ -19,7 +19,7 @@
 <body>
     <header class="header">
         <nav class="navbar fixed">
-            <a class="nav-logo" href="#">
+            <a class="nav-logo" href="/index.html">
                 <img src="media/logo.svg" height="48">
             </a>
             <ul class="navbar-items">
@@ -34,7 +34,7 @@
         <p class="centered">Some random thoughts about crypto. Notes from a course I teach. Pictures of my dachshunds.</p>
     </section>
     <main class="main">
-        <h2>Introduction</h2>
+        <h2 id="introduction">Introduction</h2>
         <figure class="centered">
             <img src="media/placeholder.png" alt="Photo de Batata" width="40%">
             <figcaption>Fig.1 – Placeholder.</figcaption>
@@ -43,7 +43,7 @@
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro esse quia quas iste quo aperiam vel. Quas sequi quisquam doloribus dolor fuga non eum distinctio necessitatibus aliquid, labore id itaque.
         Nisi ad atque officia rerum quo exercitationem.</p>
         
-        <h2>Biographie</h2>
+        <h2 id="biographie">Biographie</h2>
         <p>Beatae cupiditate ea tempore animi provident iusto unde fugiat hic quisquam maiores accusantium libero ratione, quas, quaerat enim? Cumque adipisci distinctio dolor illum.
         Architecto animi quisquam quam libero ipsum corrupti nulla neque amet saepe aliquid voluptatum assumenda debitis repellat minus qui quis officia inventore, explicabo dolorem tenetur eaque sapiente mollitia porro. Doloremque, eaque.
         Laborum temporibus minima quod blanditiis officia officiis expedita illum nulla! Quaerat, officia.Reiciendis delectus, commodi labore dignissimos in unde. Eaque necessitatibus repellat at ipsum similique natus, nam minima optio a.
@@ -56,26 +56,26 @@
         Doloremque, itaque blanditiis. Asperiores dolorem totam libero id.</p>
         
 
-        <h2>Œuvres</h2>
+        <h2 id="oeuvres">Œuvres</h2>
         <p>Mollitia similique porro ea sed dolor sequi corrupti accusamus hic eius earum esse excepturi, obcaecati repellat facere dicta maxime nemo quidem autem?
         Beatae reprehenderit repudiandae, dolorem labore, a quia unde rerum ea magnam dignissimos odit laborum. Corporis officiis ex rerum architecto, doloribus sed totam, dolorum ea iure nostrum, beatae hic facilis sapiente!
         Iure sit quia corrupti eaque obcaecati beatae vel consectetur doloremque delectus similique labore ipsa aspernatur neque amet, qui mollitia nisi aliquam vitae laborum, saepe itaque culpa commodi. Esse, mollitia officiis!
         Obcaecati dolor quasi repellendus harum eligendi rerum, laborum excepturi facilis qui quidem porro nulla, sapiente voluptatum nemo dolores itaque. Eligendi sed delectus porro corporis beatae iure cupiditate esse quibusdam dicta!</p>
 
         <h1> Comments: </h1>
-        <div class="comment-form" style="display: flex; flex-direction: row">
-            <img src="media/Moufdi_zakaria.jpg" width="96px" class="rounded">
-            <form method="post" action="#">
-                <textarea name="" id="" cols="180" rows="4" placeholder="Laisser l'auteur un commentaire..."></textarea>
-                <input type="submit" value="Commenter" style="float:right">
-                <input type="reset" value="Annuler" style="float:right">
+        <div class="comment-form">
+            <img src="media/Moufdi_zakaria.jpg" width="96px" class="rounded" style="display: inline;">
+            <form method="post" action="">
+                <textarea name="" id="" cols="110" rows="4" placeholder="Laisser l'auteur un commentaire..." style="margin-left: 2%;"></textarea>
+                <input type="submit" value="Commenter" class="submit">
+                <input type="reset" value="Annuler" class="annuler">
             </form>
         </div>
 
         <div class="comments-list">
-            <div class="comment" style="display: flex; flex-direction: row">
-                <img src="media/Moufdi_zakaria.jpg" width="96px" class="rounded">
-                <p>
+            <div class="comment" >
+                <img src="media/Moufdi_zakaria.jpg" width="96px" class="rounded" >
+                <p style="margin-left: 2%;">
                     Mollitia similique porro ea sed dolor sequi corrupti accusamus hic eius earum esse excepturi, obcaecati repellat facere
                     dicta maxime nemo quidem autem? Beatae reprehenderit repudiandae, dolorem labore,
                 </p>
