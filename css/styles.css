@@ -1,4 +1,4 @@
-:root{
+*, *::placeholder{
     font-family: 'Poppins', 'Roboto', -apple-system, 'Segoe UI';
 }
 *, :after, :before {
@@ -20,20 +20,71 @@ body{
     margin: 0;
     background-color: rgb(231, 239, 245);
 }
+main {
+    width: 80%;
+    float: left;
+    padding: 2rem 6rem 4rem;
+}
+aside {
+    width: 20%;
+    float: right;
+    padding: 4rem 1rem 4rem 0;
+}
+footer {
+    margin-top: 4rem;
+    width: 100%;
+    height: 250px;
+    color: whitesmoke;
+}
+.footer-col {
+    background-color: #232323;
+    padding-top: 4rem;
+    height: 100%;
+    float: left;
+}
+.footer-link{
+    color: #777;
+    transition: 80ms;
+}
+.footer-link:hover {
+    color: #fff;
+}
+@media screen and (max-width: 1200px) {
+    main {
+        width: 70%;
+        padding: 2rem 6rem 4rem;
+    }
+
+    aside {
+        width: 30%;
+        padding: 4rem 1rem 4rem 0;
+    }
+}
+@media screen and (max-width: 850px) {
+    main {
+        width: 100%;
+        padding: 2rem 6rem 4rem;
+    }
+
+    aside {
+        width: 100%;
+        padding: 2rem 6rem 4rem;
+    }
+}
+
 .header{
-    padding: 0.25rem 1rem;
     background-color: #150728;
 }
 .navbar{
     margin: 0;
-    padding: 0.75rem 12% 0.25rem;
+    padding: 0.75rem 12% 0rem;
     width: 100%;
     top: 0;
-    left: 0;
     background-color: #150728;
 }
 .fixed{
     position: fixed;
+    z-index: 1;
 }
 .nav-logo{
     display: inline-block;
@@ -63,7 +114,7 @@ body{
     background-size: cover;
     height: 365px;
     padding: 3rem 8rem;
-    margin-top: 3rem;
+    margin-top: 3.9rem;
 }
 .post-hero-section {
     background: url('../media/cover2.jpg') no-repeat center, linear-gradient(rgba(0,0,0,.15) 50%,rgba(0,0,0,.45));
@@ -82,24 +133,33 @@ body{
     color: rgb(236, 236, 236);
     margin-top: 0;
 }
-main {
-    width: 80%;
-    float: left;
-    padding: 2rem 6rem;
+.links-header {
+    margin-top: 0rem;
+    margin-bottom: 0.25rem;
 }
-aside {
-    width: 20%;
-    float: left;
-    padding: 4rem 0;
+.links-list{
+    margin-top: 0;
+    padding-left: 1rem;
+}
+.p-0{
+    padding: 0!important;
+}
+.m-0 {
+    margin: 0 !important;
+}
+.mb-2 {
+    margin-bottom: 1rem;
 }
 
 .card{
     display: inline-block;
-    border: 1px solid rgb(20, 20, 20);
+    background-color: rgb(248, 254, 255);
+    border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0,0,0, 0.2);
-    width: 350px;
-    transition: transform 0.2s;
+    box-shadow: 2px 2px 8px rgba(0,0,0, 0.1);
+    width: 100%;
+    padding: 1rem 0.5rem;
+    margin-bottom: 1rem;
 }
 .card .card-header img{
     border-radius: 8px 8px 0 0;
@@ -117,7 +177,10 @@ aside {
     margin-bottom: 1rem;
     font-weight: 300;
 }
-.card:hover{
+.card-zoom{
+    transition: transform 0.2s;
+}
+.card-zoom:hover{
     transform: scale(1.05);
 }
 .text-muted{
@@ -127,19 +190,12 @@ aside {
     font-weight: 800;
 }
 
-
-.footer{
-    width: 100%;
-    clear: both;
-    background-color: #535353;
-}
-
 article{
     display: flex;
     flex-direction: row;
 }
 article img{
-    margin-right: 2rem;
+    margin-right: 1.5rem;
 }
 .centered{
     text-align: center;
@@ -148,41 +204,55 @@ article img{
     border-radius: 50%;
 }
 
-.submit{
+.btn {
     border-radius: 20px;
+    padding: 0.5rem 1rem;
+    transition: transform 80ms ease-in;
+}
+.submit{
     border: 1px solid #207fec;
     background-color: #418ed6;
     color: #ffffff;
-    font-size: 10px;
-    padding: 10px 20px;
-    letter-spacing: 1px;
-    transition: transform 80ms ease-in;
     float:right
 }
 .submit:hover {
     background-color: #207fec;
-    font-weight: bold;
 }
 .submit:active {
-    background-color: #6a8ea7;
+    background-color: #1465c2;
 }
 .annuler {
-    border-radius: 20px;
     border: 1px solid rgb(218, 225, 231);
     background-color: rgba(231, 239, 245, 0.678);
     color: #202020;
-    font-size: 10px;
-    padding: 10px 20px;
-    letter-spacing: 1px;
-    transition: transform 80ms ease-in;
-    float:right
+    float:right;
 }
 .annuler:hover {
     background-color: rgb(219, 225, 230);
-    font-weight: bold;
 }
 .annuler:active {
     background-color: #a7a7a7;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+}
+
+.comment-form textarea {
+    width: 100%;
+    border-color: #a7a7a738;
+    background-color: #cacaca47;
+    resize: none;
+    font-size: 12pt;
+    transition: 300ms;
+}
+
+.comment-form textarea:focus {
+    border-color: #d8cee746;
+    border-bottom-color: #087afd;
+    outline: 0;
 }
 
 .comment{
@@ -191,18 +261,3 @@ article img{
     padding: 1%;
 }
 
-.comment-form{
-    display: flex; 
-    flex-direction: row;
-    padding: 1%;
-}
-.comment-form textarea{
-    border-color: #a7a7a738;
-    background-color: #a7a7a738;
-
-}
-.comment-form textarea:focus{
-    border-color: #d8cee746;
-    border-bottom-color: #087afd;
-    outline: 0;
-}

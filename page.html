@@ -13,7 +13,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
-    <title>Index page</title>
+    <title>Blog post page</title>
 </head>
 
 <body>
@@ -33,63 +33,13 @@
         <h1 class="centered">A Few Thoughts on Cryptographic Engineering</h1>
         <p class="centered">Some random thoughts about crypto. Notes from a course I teach. Pictures of my dachshunds.</p>
     </section>
-    <main class="main">
-        <h2 id="introduction">Introduction</h2>
-        <figure class="centered">
-            <img src="media/placeholder.png" alt="Photo de Batata" width="40%">
-            <figcaption>Fig.1 – Placeholder.</figcaption>
-        </figure>
-
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro esse quia quas iste quo aperiam vel. Quas sequi quisquam doloribus dolor fuga non eum distinctio necessitatibus aliquid, labore id itaque.
-        Nisi ad atque officia rerum quo exercitationem.</p>
-        
-        <h2 id="biographie">Biographie</h2>
-        <p>Beatae cupiditate ea tempore animi provident iusto unde fugiat hic quisquam maiores accusantium libero ratione, quas, quaerat enim? Cumque adipisci distinctio dolor illum.
-        Architecto animi quisquam quam libero ipsum corrupti nulla neque amet saepe aliquid voluptatum assumenda debitis repellat minus qui quis officia inventore, explicabo dolorem tenetur eaque sapiente mollitia porro. Doloremque, eaque.
-        Laborum temporibus minima quod blanditiis officia officiis expedita illum nulla! Quaerat, officia.Reiciendis delectus, commodi labore dignissimos in unde. Eaque necessitatibus repellat at ipsum similique natus, nam minima optio a.
-        Animi, placeat earum, nostrum voluptatibus odit tempore rerum fugiat, iure iste distinctio veniam labore obcaecati dolore accusamus veritatis blanditiis at ipsam hic nulla! Voluptatem, blanditiis. Expedita officia veritatis repellat a?
-        Fugit, impedit excepturi?</p>
-        
-        <p>Provident autem velit doloribus culpa tempore illum harum, minima beatae odit delectus veritatis reiciendis accusantium repellendus, distinctio dicta placeat, est saepe at! Quos dignissimos delectus ipsum non?
-        Debitis repellendus quod labore recusandae quos ea sunt odit porro adipisci praesentium itaque corrupti fuga voluptate alias incidunt deserunt, enim et ducimus officiis rerum a ex aperiam dolor! Amet, blanditiis.
-        Amet deserunt veniam, mollitia nihil voluptatem ipsum porro fuga, doloremque animi accusamus iste eligendi quos ad dolores molestias voluptates omnis vitae reiciendis. Temporibus totam voluptate, harum suscipit recusandae tempora maxime.
-        Doloremque, itaque blanditiis. Asperiores dolorem totam libero id.</p>
-        
-
-        <h2 id="oeuvres">Œuvres</h2>
-        <p>Mollitia similique porro ea sed dolor sequi corrupti accusamus hic eius earum esse excepturi, obcaecati repellat facere dicta maxime nemo quidem autem?
-        Beatae reprehenderit repudiandae, dolorem labore, a quia unde rerum ea magnam dignissimos odit laborum. Corporis officiis ex rerum architecto, doloribus sed totam, dolorum ea iure nostrum, beatae hic facilis sapiente!
-        Iure sit quia corrupti eaque obcaecati beatae vel consectetur doloremque delectus similique labore ipsa aspernatur neque amet, qui mollitia nisi aliquam vitae laborum, saepe itaque culpa commodi. Esse, mollitia officiis!
-        Obcaecati dolor quasi repellendus harum eligendi rerum, laborum excepturi facilis qui quidem porro nulla, sapiente voluptatum nemo dolores itaque. Eligendi sed delectus porro corporis beatae iure cupiditate esse quibusdam dicta!</p>
-
-        <h1> Comments: </h1>
-        <div class="comment-form">
-            <img src="media/Moufdi_zakaria.jpg" width="96px" class="rounded" style="display: inline;">
-            <form method="post" action="">
-                <textarea name="" id="" cols="110" rows="4" placeholder="Laisser l'auteur un commentaire..." style="margin-left: 2%;"></textarea>
-                <input type="submit" value="Commenter" class="submit">
-                <input type="reset" value="Annuler" class="annuler">
-            </form>
-        </div>
-
-        <div class="comments-list">
-            <div class="comment" >
-                <img src="media/Moufdi_zakaria.jpg" width="96px" class="rounded" >
-                <p style="margin-left: 2%;">
-                    Mollitia similique porro ea sed dolor sequi corrupti accusamus hic eius earum esse excepturi, obcaecati repellat facere
-                    dicta maxime nemo quidem autem? Beatae reprehenderit repudiandae, dolorem labore,
-                </p>
-            </div>
-            
-        </div>
-    </main>
     <aside class="sidebar">
         <div class="card author-card">
             <div class="card-body" style="display: flex; flex-direction: row">
                 <img src="media/Moufdi_zakaria.jpg" width="96px" height="96px" class="rounded">
                 <div>
-                    <h4 style="margin: 0 0;">MOUFDI Zakaria</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dolor rem nihil.</p>
+                    <h4 class="m-0">MOUFDI Zakaria</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
             </div>
             <div class="card-body">
@@ -98,8 +48,8 @@
         </div>
         <div class="card">
             <div class="card-body">
-                <h2> Sommaire: </h2>
-                <ol style="list-style: upper-roman;">
+                <h2 class="links-header"> Sommaire: </h2>
+                <ol class="links-list" style="list-style: upper-roman;">
                     <li><a href="#introduction"> Introduction </a></li>
                     <li><a href="#biographie"> Biographie </a></li>
                     <li><a href="#oeuvres"> Œuvres </a></li>
@@ -108,7 +58,7 @@
         </div>
         <div class="card">
             <div class="card-body">
-                <h2> Similar posts: </h2>
+                <h2 class="links-header"> Similar posts: </h2>
                 <ul class="links-list">
                     <li><a href="#">Post1</a></li>
                     <li><a href="#">Post2</a></li>
@@ -117,25 +67,101 @@
             </div>
         </div>
     </aside>
-    <footer class="footer">
-        <div>
-            <img src="media/logo.svg" height="96">
-            <p> Copyright &copy; 2022 Tous les droits sont reservés</p>
+    <main class="main">
+        <h2 id="introduction">I. Introduction</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro esse quia quas iste quo aperiam vel. Quas sequi
+            quisquam doloribus dolor fuga non eum distinctio necessitatibus aliquid, labore id itaque.
+            Nisi ad atque officia rerum quo exercitationem.</p>
+
+        <figure class="centered">
+            <img src="media/placeholder.png" alt="Photo de Batata" width="40%">
+            <figcaption>Fig.1 – Placeholder.</figcaption>
+        </figure>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro esse quia quas iste quo aperiam vel. Quas sequi
+            quisquam doloribus dolor fuga non eum distinctio necessitatibus aliquid, labore id itaque.
+            Nisi ad atque officia rerum quo exercitationem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro esse quia quas iste quo aperiam vel. Quas sequi
+            quisquam doloribus dolor fuga non eum distinctio necessitatibus aliquid, labore id itaque.
+            Nisi ad atque officia rerum quo exercitationem.</p>
+        
+        <h2 id="biographie">II. Biographie</h2>
+        <p>Beatae cupiditate ea tempore animi provident iusto unde fugiat hic quisquam maiores accusantium libero ratione, quas, quaerat enim? Cumque adipisci distinctio dolor illum.
+        Architecto animi quisquam quam libero ipsum corrupti nulla neque amet saepe aliquid voluptatum assumenda debitis repellat minus qui quis officia inventore, explicabo dolorem tenetur eaque sapiente mollitia porro. Doloremque, eaque.
+        Laborum temporibus minima quod blanditiis officia officiis expedita illum nulla! Quaerat, officia.Reiciendis delectus, commodi labore dignissimos in unde. Eaque necessitatibus repellat at ipsum similique natus, nam minima optio a.
+        Animi, placeat earum, nostrum voluptatibus odit tempore rerum fugiat, iure iste distinctio veniam labore obcaecati dolore accusamus veritatis blanditiis at ipsam hic nulla! Voluptatem, blanditiis. Expedita officia veritatis repellat a?
+        Fugit, impedit excepturi?</p>
+        
+        <p>Provident autem velit doloribus culpa tempore illum harum, minima beatae odit delectus veritatis reiciendis accusantium repellendus, distinctio dicta placeat, est saepe at! Quos dignissimos delectus ipsum non?
+        Debitis repellendus quod labore recusandae quos ea sunt odit porro adipisci praesentium itaque corrupti fuga voluptate alias incidunt deserunt, enim et ducimus officiis rerum a ex aperiam dolor! Amet, blanditiis.</p>
+
+        <p>Amet deserunt veniam, mollitia nihil voluptatem ipsum porro fuga, doloremque animi accusamus iste eligendi quos ad dolores molestias voluptates omnis vitae reiciendis. Temporibus totam voluptate, harum suscipit recusandae tempora maxime.
+        Doloremque, itaque blanditiis. Asperiores dolorem totam libero id.</p>
+        
+
+        <h2 id="oeuvres">III. Œuvres</h2>
+        <p>Mollitia similique porro ea sed dolor sequi corrupti accusamus hic eius earum esse excepturi, obcaecati repellat facere dicta maxime nemo quidem autem?
+        Beatae reprehenderit repudiandae, dolorem labore, a quia unde rerum ea magnam dignissimos odit laborum. Corporis officiis ex rerum architecto, doloribus sed totam, dolorum ea iure nostrum, beatae hic facilis sapiente!
+        Iure sit quia corrupti eaque obcaecati beatae vel consectetur doloremque delectus similique labore ipsa aspernatur neque amet, qui mollitia nisi aliquam vitae laborum, saepe itaque culpa commodi.
+        
+        <p>Esse, mollitia officiis! Obcaecati dolor quasi repellendus harum eligendi rerum, laborum excepturi facilis qui quidem porro nulla, sapiente voluptatum nemo dolores itaque. Eligendi sed delectus porro corporis beatae iure cupiditate esse quibusdam dicta!</p>
+
+        <h1> 3 Comments: </h1>
+        <form method="post" action="">
+            <div class="comment-form">
+                <img src="media/Moufdi_zakaria.jpg" width="96px" height="96px" class="rounded" style="display: inline;">
+                <div style="margin-left: 2%; width:100%">
+                    <textarea name="" id="" rows="2" placeholder="Laisser l'auteur un commentaire..."></textarea>
+                    <input type="submit" value="Commenter" class="btn submit">
+                    <input type="reset" value="Annuler" class="btn annuler">
+                </div>
+            </div>
+        </form>
+
+        <div class="comments-list">
+            <div class="comment" >
+                <img src="media/Moufdi_zakaria.jpg" width="96px" height="96px" class="rounded" >
+                <div>
+                    <h4 style="margin: 0 0 0.25rem 2%;">MOUFDI Zakaria</h4>
+                    <p style="margin-left: 2%; margin-top: 0; margin-bottom: 0;">
+                        Mollitia similique porro ea sed dolor sequi corrupti accusamus hic eius earum esse excepturi, obcaecati repellat facere
+                        dicta maxime nemo quidem autem? Beatae reprehenderit repudiandae, dolorem labore.
+                    </p>
+                    <time style="margin-left: 2%; margin-top: 0; margin-bottom: 0;" class="text-muted">30/03/2022 @ 11:31 PM</time>
+                </div>
+            </div>
+            <div class="comment">
+                <img src="media/Moufdi_zakaria.jpg" width="96px" height="96px" class="rounded">
+                <div>
+                    <h4 style="margin: 0 0 0.25rem 2%;">MOUFDI Zakaria</h4>
+                    <p style="margin-left: 2%; margin-top: 0; margin-bottom: 0;">
+                        Mollitia similique porro ea sed dolor sequi corrupti accusamus hic eius earum esse excepturi, obcaecati
+                        repellat facere
+                        dicta maxime nemo quidem autem? Beatae reprehenderit repudiandae, dolorem labore.
+                    </p>
+                    <time style="margin-left: 2%; margin-top: 0; margin-bottom: 0;" class="text-muted">30/03/2022 @ 11:31 PM</time>
+                </div>
+            </div>
+            
         </div>
-        <div>
-            <h4 class="bold">Popular posts</h4>
+    </main>
+    <footer class="footer">
+        <div class="footer-col centered" style="width: 40%; padding-left: 5%;">
+            <img src="media/logo.svg" height="96" class="m-0">
+            <p class="m-0"> Copyright &copy; 2022 Tous les droits sont reservés</p>
+        </div>
+        <div class="footer-col centered" style="width: 30%">
+            <h4 class="bold links-header">Popular posts</h4>
             <ul class="links-list">
-                <li><a href="#">Post1</a></li>
-                <li><a href="#">Post2</a></li>
-                <li><a href="#">Post3</a></li>
+                <li><a href="#" class="footer-link">Post1</a></li>
+                <li><a href="#" class="footer-link">Post2</a></li>
+                <li><a href="#" class="footer-link">Post3</a></li>
             </ul>
         </div>
-        <div>
-            <h4 class="bold">All Posts</h4>
+        <div class="footer-col centered" style="width: 30%; padding-right: 25%;">
+            <h4 class="bold links-header">All Posts</h4>
             <ul class="links-list">
-                <li><a href="#">Post1</a></li>
-                <li><a href="#">Post2</a></li>
-                <li><a href="#">Post3</a></li>
+                <li><a href="#" class="footer-link">Post1</a></li>
+                <li><a href="#" class="footer-link">Post2</a></li>
+                <li><a href="#" class="footer-link">Post3</a></li>
             </ul>
         </div>
     </footer>
