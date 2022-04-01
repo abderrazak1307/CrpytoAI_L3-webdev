@@ -4,6 +4,15 @@
 *, :after, :before {
     box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
+body{
+    color:#424242;
+}
+h1, h2, h3, h4, h5, h6{
+    color:#202020;
+}
 a {
     text-decoration:none;
     color: #4e3374;
@@ -21,12 +30,12 @@ body{
     background-color: rgb(231, 239, 245);
 }
 main {
-    width: 80%;
+    width: 75%;
     float: left;
     padding: 2rem 6rem 4rem;
 }
 aside {
-    width: 20%;
+    width: 25%;
     float: right;
     padding: 4rem 1rem 4rem 0;
 }
@@ -34,7 +43,9 @@ footer {
     margin-top: 4rem;
     width: 100%;
     height: 250px;
-    color: whitesmoke;
+}
+footer .links-header{
+    color: whitesmoke!important;
 }
 .footer-col {
     background-color: #232323;
@@ -74,11 +85,14 @@ footer {
 
 .header{
     background-color: #150728;
+    margin: 0;
+    width: 100%;
+    top: 0;
 }
 .navbar{
     margin: 0;
-    padding: 0.75rem 12% 0rem;
     width: 100%;
+    padding-top: 0.25rem;
     top: 0;
     background-color: #150728;
 }
@@ -87,12 +101,12 @@ footer {
     z-index: 1;
 }
 .nav-logo{
+    padding-left: 4rem;
     display: inline-block;
-    height: 48px;
 }
 .navbar-items{
     float: right;
-    margin: 0 0 0 auto;
+    margin: 0 0 0 0;
 }
 .navbar-item{
     display: inline-block;
@@ -107,28 +121,47 @@ footer {
 .navbar-link:hover{
     color: white;
 }
+.mobile-button {
+    float: right;
+    visibility: hidden;
+}
 
+@media screen and (max-width: 720px) {
+    .navbar-items {
+        clear: both;
+        float: left;
+        background-color: #0a0018;
+        width: 100%;
+    }
+    .navbar-item {
+        display: block;
+    }
+    .mobile-button {
+        visibility: visible;
+    }
+}
 .hero-section{
     background: url('../media/cover.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 365px;
-    padding: 3rem 8rem;
-    margin-top: 3.9rem;
+    margin-top: 42px;
+    padding: 6rem 5rem 6rem 8rem;
 }
 .post-hero-section {
     background: url('../media/cover2.jpg') no-repeat center, linear-gradient(rgba(0,0,0,.15) 50%,rgba(0,0,0,.45));
     background-size: cover;
     background-attachment: scroll;
+    margin-top: 42px;
+    padding: 6rem 5rem 6rem 8rem;
 }
 .hero-section h1{
-    font-size: 4em;
+    font-size: 2em;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
     color: white;
     margin: 0 0 0.5rem;
 }
 .hero-section p{
-    font-size: 1.5em;
+    font-size: 1em;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
     color: rgb(236, 236, 236);
     margin-top: 0;
@@ -158,14 +191,14 @@ footer {
     border-radius: 8px;
     box-shadow: 2px 2px 8px rgba(0,0,0, 0.1);
     width: 100%;
-    padding: 1rem 0.5rem;
+    padding: 1rem 0rem;
     margin-bottom: 1rem;
 }
 .card .card-header img{
     border-radius: 8px 8px 0 0;
 }
 .card .card-body{
-    padding: 0rem 2rem;
+    padding: 0rem 1.5rem;
 }
 .card .card-body h3, .card .card-body h4{
     margin-top: 0.5rem;
@@ -187,15 +220,17 @@ footer {
     color: #535353;
 }
 .bold{
-    font-weight: 800;
+    font-weight: 800!important;
 }
 
 article{
     display: flex;
     flex-direction: row;
 }
-article img{
+.thumbnail{
     margin-right: 1.5rem;
+    width: 150px;
+    height: auto;
 }
 .centered{
     text-align: center;
@@ -203,7 +238,6 @@ article img{
 .rounded {
     border-radius: 50%;
 }
-
 .btn {
     border-radius: 20px;
     padding: 0.5rem 1rem;
