@@ -124,7 +124,13 @@ footer .links-header{
 .navbar_button {
     float: right;
     visibility: hidden;
-    margin: 2px;
+    background-color: rgba(121, 121, 121, 0.5);
+    color: rgb(225, 225, 225);
+    outline: 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 14pt;
+    margin: 2px 1rem 2px 2px;
     width: 34px;
     height: 34px;
 }
@@ -152,14 +158,14 @@ footer .links-header{
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 42px;
-    padding: 6rem 5rem 6rem 8rem;
+    padding: 10rem 8rem 10rem 8rem;
 }
 .post-hero-section {
     background: url('../media/cover2.jpg') no-repeat center, linear-gradient(rgba(0,0,0,.15) 50%,rgba(0,0,0,.45));
     background-size: cover;
     background-attachment: scroll;
     margin-top: 42px;
-    padding: 6rem 5rem 6rem 8rem;
+    padding: 10rem 8rem 10rem 8rem;
 }
 .hero-section h1{
     font-size: 2em;
@@ -245,8 +251,26 @@ article{
 .rounded {
     border-radius: 50%;
 }
+.input {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: .25rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #cacaca47;
+    font-size: 12pt;
+    transition: 300ms;
+}
+.input:focus {
+    border-color: #d8cee746;
+    border-bottom-color: #087afd;
+    outline: 0;
+}
+
 .btn {
-    border-radius: 20px;
+    border-radius: 8px;
     padding: 0.5rem 1rem;
     transition: transform 80ms ease-in;
 }
@@ -283,6 +307,7 @@ article{
 
 .comment-form textarea {
     width: 100%;
+    padding: 0.5rem 1rem;
     border-color: #a7a7a738;
     background-color: #cacaca47;
     resize: none;
