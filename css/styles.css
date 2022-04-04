@@ -121,9 +121,12 @@ footer .links-header{
 .navbar-link:hover{
     color: white;
 }
-.mobile-button {
+.navbar_button {
     float: right;
     visibility: hidden;
+    margin: 2px;
+    width: 34px;
+    height: 34px;
 }
 
 @media screen and (max-width: 720px) {
@@ -132,13 +135,17 @@ footer .links-header{
         float: left;
         background-color: #0a0018;
         width: 100%;
+        display: none;
     }
     .navbar-item {
         display: block;
     }
-    .mobile-button {
+    .navbar_button {
         visibility: visible;
     }
+}
+.show{
+    display: block;
 }
 .hero-section{
     background: url('../media/cover.jpg');

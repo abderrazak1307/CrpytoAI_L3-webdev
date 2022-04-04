@@ -19,10 +19,10 @@
             <a class="nav-logo" href="#">
                 <img src="media/logo.svg" height="42">
             </a>
-            <button class="mobile-button">
-                Options
+            <button class="navbar_button" id="navbutton">
+                O
             </button>
-            <ul class="navbar-items">
+            <ul class="navbar-items" id="navbar">
                 <li class="navbar-item"><a class="navbar-link" href="index.html#popular">Popular posts</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="index.html#all-posts">All posts</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="contact_us.html">Contact us</a></li>
@@ -173,6 +173,10 @@
             </ul>
         </div>
     </footer>
+    <script>
+        document.getElementById('navbutton').onclick = () => {
+            document.getElementById('navbar').classList.toggle('show');
+        }
+    </script>
 </body>
-
 </html>
