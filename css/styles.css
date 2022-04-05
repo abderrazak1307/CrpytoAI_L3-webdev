@@ -1,4 +1,4 @@
-*, *::placeholder{
+*, *::placeholder, *::after, *::before{
     font-family: 'Poppins', 'Roboto', -apple-system, 'Segoe UI';
 }
 *, :after, :before {
@@ -74,12 +74,23 @@ footer .links-header{
 @media screen and (max-width: 850px) {
     main {
         width: 100%;
-        padding: 2rem 6rem 4rem;
+        padding: 2rem 2rem 4rem;
     }
 
     aside {
         width: 100%;
-        padding: 2rem 6rem 4rem;
+        padding: 2rem 2rem 4rem;
+    }
+}
+@media screen and (max-width: 600px) {
+    main {
+        width: 100%;
+        padding: 2rem 1rem 4rem;
+    }
+
+    aside {
+        width: 100%;
+        padding: 2rem 1rem 4rem;
     }
 }
 
@@ -236,11 +247,13 @@ footer .links-header{
     font-weight: 800!important;
 }
 
-article{
-    display: flex;
-    flex-direction: row;
+.inner-article{
+    display: inline-block;
+    width: calc(95% - 150px);
+    height: auto;
 }
 .thumbnail{
+    float: left;
     margin-right: 1.5rem;
     width: 150px;
     height: auto;
@@ -300,14 +313,27 @@ article{
 }
 
 .comment-form {
-    display: flex;
-    flex-direction: row;
     padding: 1%;
+    display: inline-block;
+    width: calc(100% - 96px);
 }
 
+.author-card {
+    padding: 1rem;
+}
+.author-card img{
+    float:left;
+}
+.author-info{
+    display: inline-block;
+    margin-left: 1rem;
+    width: calc(100% - 85px);
+}
 .comment-form textarea {
     width: 100%;
+    display: block;
     padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
     border-color: #a7a7a738;
     background-color: #cacaca47;
     resize: none;
@@ -322,8 +348,18 @@ article{
 }
 
 .comment{
-    display: flex; 
-    flex-direction: row;
     padding: 1%;
+    height: 100%;
+}
+.comment > img{
+    float:left;
+}
+.inner-comment {
+    display: inline-block;
+    width: calc(99% - 64px);
+    height: 100%;
 }
 
+hr{
+    opacity: 0.25;
+}

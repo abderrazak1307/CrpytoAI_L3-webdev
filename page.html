@@ -15,7 +15,7 @@
 <body>
     <header class="header fixed">
         <nav class="navbar fixed">
-            <a class="nav-logo" href="#">
+            <a class="nav-logo" href="index.html">
                 <img src="media/logo.svg" height="42">
             </a>
             <button class="navbar_button" id="navbutton">
@@ -34,14 +34,12 @@
     </section>
     <aside class="sidebar">
         <div class="card author-card">
-            <div class="card-body" style="display: flex; flex-direction: row">
-                <img src="media/Moufdi_zakaria.jpg" width="64px" height="64px" class="rounded">
-                <div>
-                    <h4 class="m-0">MOUFDI Zakaria</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                </div>
+            <img src="media/Moufdi_zakaria.jpg" width="64px" height="64px" class="rounded">
+            <div class="author-info">
+                <h4 class="m-0">MOUFDI Zakaria</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
-            <div class="card-body">
+            <div>
                 Email: <address style="display: inline;">moufdi_lesang@hotmail.fr</address>
             </div>
         </div>
@@ -133,22 +131,21 @@
         
         <p>Esse, mollitia officiis! Obcaecati dolor quasi repellendus harum eligendi rerum, laborum excepturi facilis qui quidem porro nulla, sapiente voluptatum nemo dolores itaque. Eligendi sed delectus porro corporis beatae iure cupiditate esse quibusdam dicta!</p>
 
-        <h1> 2 Commentaires: </h1>
+        <hr>
+        <h2> 2 Commentaires: </h2>
         <form method="post" action="">
-            <div class="comment-form">
-                <img src="media/Moufdi_zakaria.jpg" width="64px" height="64px" class="rounded" style="display: inline;">
-                <div style="margin-left: 2%; width:100%">
-                    <textarea name="" id="" rows="2" placeholder="Laisser l'auteur un commentaire..."></textarea>
-                    <input type="submit" value="Commenter" class="btn submit">
-                    <input type="reset" value="Annuler" class="btn annuler" style="margin-right: 0.5rem">
-                </div>
+            <img src="media/Moufdi_zakaria.jpg" width="64px" height="64px" class="rounded">
+            <div class="comment-form" style="margin-left: 2%;">
+                <textarea name="" id="" rows="2" placeholder="Laisser l'auteur un commentaire..."></textarea>
+                <input type="submit" value="Commenter" class="btn submit">
+                <input type="reset" value="Annuler" class="btn annuler" style="margin-right: 0.5rem">
             </div>
         </form>
 
         <div class="comments-list">
-            <div class="comment" >
+            <div class="comment">
                 <img src="media/Moufdi_zakaria.jpg" width="64px" height="64px" class="rounded" >
-                <div>
+                <div class="inner-comment">
                     <h4 style="margin: 0 0 0.25rem 2%;">MOUFDI Zakaria</h4>
                     <p style="margin-left: 2%; margin-top: 0; margin-bottom: 0;">
                         Mollitia similique porro ea sed dolor sequi corrupti accusamus hic eius earum esse excepturi, obcaecati repellat facere
@@ -159,7 +156,7 @@
             </div>
             <div class="comment">
                 <img src="media/Moufdi_zakaria.jpg" width="64px" height="64px" class="rounded">
-                <div>
+                <div class="inner-comment">
                     <h4 style="margin: 0 0 0.25rem 2%;">MOUFDI Zakaria</h4>
                     <p style="margin-left: 2%; margin-top: 0; margin-bottom: 0;">
                         Mollitia similique porro ea sed dolor sequi corrupti accusamus hic eius earum esse excepturi, obcaecati
