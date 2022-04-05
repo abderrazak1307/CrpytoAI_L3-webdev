@@ -34,12 +34,13 @@ main {
     float: left;
     padding: 2rem 6rem 4rem;
 }
-aside {
+.sidebar {
     width: 25%;
     float: right;
     padding: 4rem 1rem 4rem 0;
 }
 footer {
+    clear: both;
     margin-top: 4rem;
     width: 100%;
     height: 250px;
@@ -161,7 +162,7 @@ footer .links-header{
     margin-top: 42px;
     padding: 6rem 5rem 6rem 8rem;
 }
-.hero-section h1{
+.hero-section h1,.contactus_main h1{
     font-size: 2em;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
     color: white;
@@ -302,3 +303,39 @@ article{
     padding: 1%;
 }
 
+
+.contactus_main{
+    width: 45%;
+    float: left;
+    padding: 6rem 5rem 6rem 8rem;
+    margin-top: 42px;
+    background: url('../media/cover2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.contactus_sidebar{
+    width: 55%;
+    float: right;
+    padding: 4rem 6rem 4rem;
+    margin: 3rem 0 0 0;
+}
+.contactus_sidebar li {
+    text-decoration: none;
+    list-style-type: none;
+}
+.input{
+    border-color: #e6e6e600;
+    border-bottom-color: #99979774;
+    background-color: #ffffff00;
+    resize: none;
+    font-size: 12pt;
+    transition: 300ms;
+}
+.input:focus{
+    border-color: #d8cee700;
+    border-bottom-color: #583a90;
+    outline: 0;
+    border-bottom-width: 0.2rem;
+}
