@@ -1,4 +1,4 @@
-*, *::placeholder, *::after, *::before{
+body, ::placeholder{
     font-family: 'Poppins', 'Roboto', -apple-system, 'Segoe UI';
 }
 *, :after, :before {
@@ -192,7 +192,7 @@ aside {
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
 }
-.hero-section h1,.contactus_main h1{
+.hero-section h1{
     font-size: 2em;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
     color: white;
@@ -365,14 +365,14 @@ aside {
 .contactus_card{
     max-width: 1200px;
     height: 550px;
-    border-radius: 20px;
+    border-radius: 1rem;
     border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
 }
 
 .contactus_sidebar {
-    border-radius: 20px 0 0 20px;
+    border-radius: 1rem 0 0 1rem;
     width: 45%;
     height: 100%;
     float: left;
@@ -380,33 +380,27 @@ aside {
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
-    padding: 4rem 2rem 2rem 4rem;
+    padding: 3rem 2rem 2rem 4rem;
     border: 1px solid rgba;
 }
 .contactus_main{
     width: 55%;
     float: right;
     height: 100%;
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
 }
 
-
-.contactus_main li {
-    text-decoration: none;
-    list-style-type: none;
-}
 .form-group {
-    margin-left: 2%;
     margin-bottom: 0.5rem;
+    margin-left: 2%;
     width: 98%;
-    display: inline-block;
-    
+    float: left;
 }
 .form-group-half {
     margin-left: 2%;
     margin-bottom: 0.5rem;
-    width: 47.5%;
-    display: inline-block;
+    width: 48%;
+    float: left;
 }
 hr{
     clear: both;
@@ -415,14 +409,16 @@ hr{
 
 .table {
     border-collapse: collapse;
+    width: 100%;
 }
 .table th{
-    border-bottom: 1px solid #484848;
-    padding: 8px;
+    border-bottom: 1px solid #000000;
+    padding: 0.5rem;
+    text-align: left;
 }
 .table td{
-    padding: 8px;
-    border-bottom: 0.0000001px groove #484848;
+    padding: 0.5rem;
+    border-bottom: 0.0000001px groove #4848483e;
 }
 .table .tr:hover {
     background-color: #ddd9eca0;

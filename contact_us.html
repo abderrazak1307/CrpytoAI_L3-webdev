@@ -7,13 +7,14 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
         <title>Contact Us Page</title>
     </head>
     <body>
         <header class="header fixed">
             <nav class="navbar fixed">
                 <a class="nav-logo" href="index.html">
-                    <img src="media/logo.svg" height="42">
+                    <img src="media/logo.svg" height="42" alt="Logo">
                 </a>
                 <button class="navbar_button" id="navbutton">
                     <i class="fa-solid fa-bars"></i>
@@ -27,77 +28,74 @@
         </header>
         <section class="hero-section hero-section-index" style="height: 300px">
             <div class="v-center vh-center">
-                <h1>Contact Us</h1>
+                <h1>Contacter Nous</h1>
             </div>
         </section>
-        <section class="contactus_card" style="margin: 2rem auto; background-color: whitesmoke; width: 60%; ">
+        <div class="contactus_card">
             <section class="contactus_sidebar"> <!-- the pic and the elements a gauche-->
-                <h2> Contact Information </h2>
+                <h2> Informations de contact </h2>
                 <p>
-                    If you have any questions or queries a member of staff will always be happy to help. feel free to contact us by telephone or email and we will be sure to get back to you as soon as possible.
+                    Si vous avez des questions ou des remarques, un membre du personnel serait toujours heureux de vous aider. n'hésitez pas à
+                    nous contacter par téléphone ou par email et nous ne manquerons pas de vous répondre dans les meilleurs délais.
                 </p>
-                <img src="media/phone.png" style="display: inline-block; height: fit-content;">
-                <p style="margin: 0%; display: inline-block;">+2134892489</p>
-                <br>
-                <img src="media/mail.png" style="display: inline-block;">
-                <p style="margin: 0%;display: inline-block;">test@gmail.com</p>
+                
+                <p style="margin: 0.25rem 0"><i class="fa-solid fa-phone"></i> +2134892489</p>
+                <p style="margin: 0.25rem 0"><i class="fa-solid fa-envelope"></i> test@gmail.com</p>
             </section>
     
             <section class="contactus_main"> <!-- form a droite-->
-                <form method="post" action="">
+                <h2> Formulaire de contact </h2>
+                <form method="post" action="#">
                     <div class="form-group-half">
-                        <label>First Name</label> <br>
-                    <input type="text" placeholder="Your name..." class="input">
+                        <label for="nom">Nom</label>
+                        <input type="text" name="nom" id="nom" placeholder="Votre nom..." class="input">
                     </div>
                     <div class="form-group-half">
-                        <label>Last Name</label><br>
-                        <input type="text" placeholder="Your Last name..." class="input">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" name="prenom" id="prenom" placeholder="Votre prénom..." class="input">
                     </div>
                     <div class="form-group-half">
-                        <label>Email</label><br>
-                        <input type="email" placeholder="Your Email..." class="input">
+                        <label for="email">Email</label><br>
+                        <input type="email" name="email" id="email" placeholder="Votre email..." class="input">
                     </div>
                     <div class="form-group-half">
-                        <label>Phone Number</label><br>
-                        <input type="tel" placeholder="Your Phone number..." class="input">
+                        <label for="tel">Téléphone</label><br>
+                        <input type="tel" name="tel" id="tel" placeholder="Votré numéro de téléphone..." class="input">
                     </div> 
-                    <div class="form-group" style="width:100%">
-                        <label>Why do you want to contact us?</label>
-                        <li class="centered">
-                        <input type="checkbox" value="feedback" > <label> Feedback</label>
-                        <input type="checkbox" value="join" >
-                        <label>Want to be one of us</label>
-                        <input type="checkbox" value="issues" >
-                        <label>Personal Issue</label>
-                        </li>
+                    <div class="form-group">
+                        <label>Pourquoi voulez-vous nous contacter ?</label>
+                        <div class="centered">
+                            <input type="radio" name="reason" value="feedback" id="feedback"> <label for="feedback">Critique</label>
+                            <input type="radio" name="reason" value="join" id="join"> <label for="join">Nous rejoindre</label>
+                            <input type="radio" name="reason" value="issues" id="issues"> <label for="issues">Problème</label>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label >Message</label> <br>
-                        <textarea name="" id="" rows="5" placeholder="Your message..." class="input" style="width:100%"></textarea>
+                        <label for="message">Message</label> <br>
+                        <textarea name="message" id="message" rows="5" placeholder="Votre message..." class="input" style="width:100%"></textarea>
                     </div>
-                    <div>
+                    <div class="form-group">
                         <input type="reset" value="Cancel" class="btn annuler">
                         <input type="submit" value="Send The Message" class="btn submit">
                     </div>
                 </form>
             </section>
-        </section>
+        </div>
 
         <footer class="footer">
             <div class="footer-col centered" style="width: 40%; padding-left: 5%;">
-                <img src="media/logo.svg" height="96" class="m-0">
+                <img src="media/logo.svg" height="96" class="m-0" alt="Logo">
                 <p class="m-0"> Copyright &copy; 2022 Tous les droits sont reservés</p>
-                
             </div>
-            <div class="footer-col centered" style="width: 30%">
+            <section class="footer-col centered" style="width: 30%">
                 <h4 class="bold links-header">Popular posts</h4>
                 <ul class="links-list">
                     <li><a href="#" class="footer-link">Post1</a></li>
                     <li><a href="#" class="footer-link">Post2</a></li>
                     <li><a href="#" class="footer-link">Post3</a></li>
                 </ul>
-            </div>
-            <div class="footer-col centered" style="width: 30%; padding-right: 20%;">
+            </section>
+            <section class="footer-col centered" style="width: 30%; padding-right: 20%;">
                 <h4 class="bold links-header">All Posts</h4>
                 <ul class="links-list">
                     <li><a href="#" class="footer-link">Post1</a></li>
@@ -106,7 +104,12 @@
                     <li><a href="#" class="footer-link">Post4</a></li>
                     <li><a href="#" class="footer-link">Post5</a></li>
                 </ul>
-            </div>
+            </section>
         </footer>
+    <script>
+        document.getElementById('navbutton').onclick = () => {
+            document.getElementById('navbar').classList.toggle('show');
+        }
+    </script>
     </body>
 </html>
