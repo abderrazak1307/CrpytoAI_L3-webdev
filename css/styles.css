@@ -412,3 +412,18 @@ hr{
     clear: both;
     opacity: 0.25;
 }
+
+.table {
+    border-collapse: collapse;
+}
+.table th{
+    border-bottom: 1px solid #484848;
+    padding: 8px;
+}
+.table td{
+    padding: 8px;
+    border-bottom: 0.0000001px groove #484848;
+}
+.table .tr:hover {
+    background-color: #ddd9eca0;
+}
