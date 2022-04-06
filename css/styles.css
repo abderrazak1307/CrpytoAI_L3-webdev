@@ -34,19 +34,22 @@ main {
     float: left;
     padding: 2rem 6rem 4rem;
 }
-.sidebar {
+aside {
     width: 25%;
     float: right;
     padding: 4rem 1rem 4rem 0;
 }
-footer {
-    clear: both;
+.footer {
     margin-top: 4rem;
     width: 100%;
     height: 250px;
+    clear: both;
 }
-footer .links-header{
+.footer .links-header{
     color: whitesmoke!important;
+}
+.right{
+    float: right;
 }
 .footer-col {
     background-color: #232323;
@@ -166,18 +169,28 @@ footer .links-header{
     display: block;
 }
 .hero-section{
-    background: url('../media/cover.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
     margin-top: 42px;
-    padding: 10rem 8rem 10rem 8rem;
+    height: 450px;
+    padding: 0 4rem;
+    position: relative;
 }
-.post-hero-section {
+.hero-section-index{
+    background: url('../media/cover.jpg') no-repeat center, linear-gradient(rgba(0, 0, 0, .15) 50%, rgba(0, 0, 0, .45));
+    background-size: cover;
+}
+.hero-section-post {
     background: url('../media/cover2.jpg') no-repeat center, linear-gradient(rgba(0,0,0,.15) 50%,rgba(0,0,0,.45));
     background-size: cover;
-    background-attachment: scroll;
-    margin-top: 42px;
-    padding: 10rem 8rem 10rem 8rem;
+}
+.v-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.vh-center {
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
 }
 .hero-section h1,.contactus_main h1{
     font-size: 2em;
@@ -266,21 +279,22 @@ footer .links-header{
     border-radius: 50%;
 }
 .input {
-    display: block;
-    width: 100%;
     margin-bottom: 0.5rem;
-    padding: .25rem;
-    border-radius: 5px;
-    border: none;
+    padding: .25rem 0.75rem;
     outline: none;
-    background-color: #cacaca47;
+    border-color: #e6e6e600;
+    border-bottom-color: #99979774;
+    background-color: #ffffff00;
     font-size: 12pt;
-    transition: 300ms;
+    transition: 100ms;
+    width: 100%;
+    resize: none;
 }
 .input:focus {
-    border-color: #d8cee746;
-    border-bottom-color: #087afd;
+    border-color: #d8cee700;
+    border-bottom-color: #583a90;
     outline: 0;
+    border-bottom-width: 0.1rem;
 }
 
 .btn {
@@ -327,25 +341,11 @@ footer .links-header{
 }
 .author-info{
     display: inline-block;
-    margin-left: 1rem;
-    width: calc(100% - 85px);
+    margin-left: 1.5rem;
+    width: calc(100% - 1.5rem - 80px);
 }
 .comment-form textarea {
-    width: 100%;
-    display: block;
-    padding: 0.5rem 1rem;
-    margin-bottom: 0.5rem;
-    border-color: #a7a7a738;
-    background-color: #cacaca47;
-    resize: none;
-    font-size: 12pt;
-    transition: 300ms;
-}
-
-.comment-form textarea:focus {
-    border-color: #d8cee746;
-    border-bottom-color: #087afd;
-    outline: 0;
+    background-color: #e3e3e347;
 }
 
 .comment{
@@ -362,40 +362,53 @@ footer .links-header{
 }
 
 
-.contactus_main{
+.contactus_card{
+    max-width: 1200px;
+    height: 550px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contactus_sidebar {
+    border-radius: 20px 0 0 20px;
     width: 45%;
+    height: 100%;
     float: left;
-    padding: 6rem 5rem 6rem 8rem;
-    margin-top: 42px;
-    background: url('../media/cover2.jpg');
+    background: url('../media/grad.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
+    padding: 4rem 2rem 2rem 4rem;
+    border: 1px solid rgba;
 }
-
-.contactus_sidebar{
+.contactus_main{
     width: 55%;
     float: right;
-    padding: 4rem 6rem 4rem;
-    margin: 3rem 0 0 0;
+    height: 100%;
+    padding: 4rem 2rem;
 }
-.contactus_sidebar li {
+
+
+.contactus_main li {
     text-decoration: none;
     list-style-type: none;
 }
-.input{
-    border-color: #e6e6e600;
-    border-bottom-color: #99979774;
-    background-color: #ffffff00;
-    resize: none;
-    font-size: 12pt;
-    transition: 300ms;
+.form-group {
+    margin-left: 2%;
+    margin-bottom: 0.5rem;
+    width: 98%;
+    display: inline-block;
+    
 }
-.input:focus{
-    border-color: #d8cee700;
-    border-bottom-color: #583a90;
-    outline: 0;
-    border-bottom-width: 0.2rem;
+.form-group-half {
+    margin-left: 2%;
+    margin-bottom: 0.5rem;
+    width: 47.5%;
+    display: inline-block;
+}
 hr{
+    clear: both;
     opacity: 0.25;
 }

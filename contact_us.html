@@ -16,77 +16,72 @@
                     <img src="media/logo.svg" height="42">
                 </a>
                 <button class="navbar_button" id="navbutton">
-                    O
+                    <i class="fa-solid fa-bars"></i>
                 </button>
                 <ul class="navbar-items" id="navbar">
-                    <li class="navbar-item"><a class="navbar-link" href="#popular">Popular posts</a></li>
-                    <li class="navbar-item"><a class="navbar-link" href="#all-posts">All posts</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="index.html#popular">Popular posts</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="index.html#all-posts">All posts</a></li>
                     <li class="navbar-item"><a class="navbar-link" href="contact_us.html">Contact us</a></li>
                 </ul>
             </nav>
         </header>
-        
-        <main class="contactus_main"> <!-- the pic and the elements a gauche-->
-            <h1>
-                Contact Information
-            </h1>
-            <p>
-                If you have any questions or queries a member of staff will always be happy to help. feel free to contact us by telephone or email and we will be sure to get back to you as soon as possible.
-            </p>
-            <img src="media/phone.png" style="display: inline-block; height: fit-content;">
-            <p style="margin: 0%; display: inline-block;">+2134892489</p>
-            <br>
-            <img src="media/mail.png" style="display: inline-block;">
-            <p style="margin: 0%;display: inline-block;">test@gmail.com</p>
-
-        </main>
-   
-        <aside class="contactus_sidebar"> <!-- form a droite-->
-            <form action="" method="get">
-
-                <div style="margin-left: 2%; width:min-content; display: inline-block;">
-                    <label>First Name</label> <br>
-                <input type="text" placeholder="Your name..." class="input">
-                </div>
-                <div style="margin-left: 2%; width:min-content; display: inline-block;">
-                    <label>Last Name</label><br>
-                    <input type="text" placeholder="Your Last name..." class="input">
-                </div>
+        <section class="hero-section hero-section-index" style="height: 300px">
+            <div class="v-center vh-center">
+                <h1>Contact Us</h1>
+            </div>
+        </section>
+        <section class="contactus_card" style="margin: 2rem; background-color: whitesmoke">
+            <section class="contactus_sidebar"> <!-- the pic and the elements a gauche-->
+                <h2> Contact Information </h2>
+                <p>
+                    If you have any questions or queries a member of staff will always be happy to help. feel free to contact us by telephone or email and we will be sure to get back to you as soon as possible.
+                </p>
+                <img src="media/phone.png" style="display: inline-block; height: fit-content;">
+                <p style="margin: 0%; display: inline-block;">+2134892489</p>
                 <br>
-                <div style="margin-left: 2%; width: min-content; display: inline-block;">
-                    <label>Email</label><br>
-                    <input type="email" placeholder="Your Email..." class="input">
-                </div>
-                <div style="margin-left: 2%; width:min-content;display: inline-block;">
-                    <label>Phone Number</label><br>
-                    <input type="tel" placeholder="Your Phone number..." class="input">
-                </div> 
-                <br>
-                <div style="margin-left: 2%; width:100%;display: inline-block;">
-                    <label>Why do you want to contact us?</label>
-                    <li>
-                    <input type="checkbox" value="feedback" >
-                    <label> feedback</label>
-                    <input type="checkbox" value="join" >
-                    <label>want to be one of us</label>
-                    <input type="checkbox" value="issues" >
-                    <label>personal issue</label>
-                    </li>
-                </div> 
-                <br>
-                <div style="margin-left: 2%; width:max-content; display: inline-block;">
-                    <label >Message</label> <br>
-                    <textarea name="" id="" rows="2" placeholder="Your message..." class="input"></textarea>
-                </div> 
-                <br>
-                <div style="margin-left: 2%; width: auto; display: inline-block;">
-                    <input type="reset" value="Cancel" class="btn annuler">
-                    <input type="submit" value="Send The Message" class="btn submit">
-                </div>
-            </form>
-        </aside>
-
-
+                <img src="media/mail.png" style="display: inline-block;">
+                <p style="margin: 0%;display: inline-block;">test@gmail.com</p>
+            </section>
+    
+            <section class="contactus_main"> <!-- form a droite-->
+                <form method="post" action="">
+                    <div class="form-group-half">
+                        <label>First Name</label> <br>
+                    <input type="text" placeholder="Your name..." class="input">
+                    </div>
+                    <div class="form-group-half">
+                        <label>Last Name</label><br>
+                        <input type="text" placeholder="Your Last name..." class="input">
+                    </div>
+                    <div class="form-group-half">
+                        <label>Email</label><br>
+                        <input type="email" placeholder="Your Email..." class="input">
+                    </div>
+                    <div class="form-group-half">
+                        <label>Phone Number</label><br>
+                        <input type="tel" placeholder="Your Phone number..." class="input">
+                    </div> 
+                    <div class="form-group" style="width:100%">
+                        <label>Why do you want to contact us?</label>
+                        <li class="centered">
+                        <input type="checkbox" value="feedback" > <label> Feedback</label>
+                        <input type="checkbox" value="join" >
+                        <label>Want to be one of us</label>
+                        <input type="checkbox" value="issues" >
+                        <label>Personal Issue</label>
+                        </li>
+                    </div>
+                    <div class="form-group">
+                        <label >Message</label> <br>
+                        <textarea name="" id="" rows="5" placeholder="Your message..." class="input" style="width:100%"></textarea>
+                    </div>
+                    <div>
+                        <input type="reset" value="Cancel" class="btn annuler">
+                        <input type="submit" value="Send The Message" class="btn submit">
+                    </div>
+                </form>
+            </section>
+        </section>
 
         <footer class="footer">
             <div class="footer-col centered" style="width: 40%; padding-left: 5%;">
