@@ -182,6 +182,10 @@ aside {
     background: url('../media/cover2.jpg') no-repeat center, linear-gradient(rgba(0,0,0,.15) 50%,rgba(0,0,0,.45));
     background-size: cover;
 }
+.hero-section-post2 {
+    background: url('../media/ML.jpg') no-repeat center, linear-gradient(rgba(0,0,0,.15) 50%,rgba(0,0,0,.45));
+    background-size: cover;
+}
 .v-center {
     margin: 0;
     position: absolute;

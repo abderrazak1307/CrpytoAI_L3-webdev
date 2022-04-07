@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>ML meet Crypto</title>
+    <title>Neural cryptography</title>
 
     <!-- SEO OPTIMIZATION META TAGS-->
     <meta name="application-name" content="Site Name">
@@ -44,20 +44,14 @@
             </ul>
         </nav>
     </header>
-    <section class="hero-section hero-section-post2">
+    <section class="hero-section hero-section-post">
         <div class="v-center vh-center">
-            <h1 class="centered">Where Machine Learning meets Cryptography</h1>
-            <p class="centered">Solving the cryptographically-relevant Learning Parity with Noise Problem via machine learning</p>
+            <h1 class="centered">Neural cryptography</h1>
+            <p class="centered">a branch of cryptography dedicated to analyzing the application of stochastic algorithms, especially artificial neural network algorithms, for use in encryption and cryptanalysis.</p>
         </div>
     </section>
     <aside class="sidebar">
-        <div class="card author-card">
-            <div class="author-info">
-                <h4 class="m-0">Dr. Robert Kübler</h4>
-            </div>
-            <br>
-            Email: <address style="display: inline;">Robert_Kübler@gmail.com</address>
-        </div>
+       
         <div class="card">
             <div class="card-body">
                 <h2 class="links-header"> Newsletter: </h2>
@@ -88,108 +82,84 @@
     </aside>
     <main class="main">
         <article>
-            <figure class="centered">
-                <img src="media/cryptoML.png" style="width:60%;" alt="@figure1">
-                
-            </figure>
 
-            
-            <p> When reading this, chances are that you know one or another thing about machine learning already. You know that machine learning algorithms typically take in a bunch of samples, each containing a fixed amount of features, and output a prediction in the end.
-                <br> <br>
-                What you maybe have heard about (but did not dig deeper into) is the field of cryptography. It is this mysterious subject where it’s all security, passwords, hiding things. Maybe you have even heard about AES or RSA, which are algorithms to encrypt data.
-                <br> <br>
-                But don’t worry, even if you have never dealt with cryptography before, you will be able to follow along since I will explain everything on an introductory level .
-                <br> <br>
-                In this article, I want to bring both fields together. I will present to you an easy to understand, yet hard to solve problem used to build cryptographic algorithms — the so-called Learning Parity with Noise problem, LPN for short. The “L” in LPN should ring your machine learning alarm bells already because this problem can be seen as a routine machine learning problem!
-                <br> <br>
-                But first, let us see where the LPN problem naturally arises in a cryptographic setting and how to define it. We will solve the LPN problem by using machine learning afterward.
-            </p>
-            <h2 id="motivation">Motivation</h2>
-            <p>Imagine that you own a hotel and you want to manage access to the guests’ rooms, i.e. each guest should only be able to enter their own room. Makes sense, right?
-            </p>
-            <figure class="centered">
-                <img src="media/hotel.png" style="width:60%;" alt="@figure2">
-                <figcaption>Fig.2 – Your hotel. Photo by Eiji K on Unsplash.</figcaption>
-            </figure>
-
-            <p>
-                Now, traditionally you could use normal, physical keys. The disadvantage is that people sometimes lose their keys, which means a lot of costs for your business since you have to replace the lock from the affected doors.
-                <br> <br>
-                So you decide on deploying smart cards, in particular cards with RFID (radio-frequency identification) chips, and also the corresponding locks. Since you have to provide for a lot of doors and you want to save money, you choose very weak RFID chips, i.e. chips with diminishing computational power, maybe even without its own source of electricity.
-                
-            </p>
-            
-
-            <h2 id="problem">The Problem</h2>
-            <p>The trouble with this solution begins when a guest wants to enter their room: A bad guy, usually called an attacker in cryptography, could sit in the hallway, apparently just typing innocently on their notebook. What the attacker actually does is sniffing the RFID traffic, i.e. reading the communication between the lock and the guest’s chip. If the chip sends the secret key directly, the attacker will see it, store it, forge a card containing this key and then will be able to enter the room.
-                <br> <br>
-                So, this is a bad idea. It only works if there are no bad people in the world (highly unlikely). Instead, we have to arm ourselves and improve security for our guests.
+            <h2 id="Definition">Definition</h2>
+            <p> 
+                Artificial neural networks are well known for their ability to selectively explore the solution space of a given problem. This feature finds a natural niche of application in the field of cryptanalysis. At the same time, neural networks offer a new approach to attack ciphering algorithms based on the principle that any function could be reproduced by a neural network, which is a powerful proven computational tool that can be used to find the inverse-function of any cryptographic algorithm.
+                <br>           
+                The ideas of mutual learning, self learning, and stochastic behavior of neural networks and similar algorithms can be used for different aspects of cryptography, like public-key cryptography, solving the key distribution problem using neural network mutual synchronization, hashing or generation of pseudo-random numbers.
                 <br>
-                The idea is the following:
+                Another idea is the ability of a neural network to separate space in non-linear pieces using "bias". It gives different probabilities of activating the neural network or not. This is very useful in the case of Cryptanalysis.
+                <br>
+                Two names are used to design the same domain of research: Neuro-Cryptography and Neural Cryptography.
+                <br>
+                The first work that it is known on this topic can be traced back to 1995 in an IT Master Thesis.    
             </p>
-            <p style="text-align: center;font-size: 14pt;">
-                "The chip somehow has to prove to the lock that it possesses the correct secret key without revealing it."
+            <h2 id="application">Applications</h2>
+            <p>In 1995, Sebastien Dourlens applied neural networks to cryptanalyze DES by allowing the networks to learn how to invert the S-tables of the DES. The bias in DES studied through Differential Cryptanalysis by Adi Shamir is highlighted. The experiment shows about 50% of the key bits can be found, allowing the complete key to be found in a short time. Hardware application with multi micro-controllers have been proposed due to the easy implementation of multilayer neural networks in hardware.
+                <br>
+                One example of a public-key protocol is given by Khalil Shihab. He describes the decryption scheme and the public key creation that are based on a backpropagation neural network. The encryption scheme and the private key creation process are based on Boolean algebra. This technique has the advantage of small time and memory complexities. A disadvantage is the property of backpropagation algorithms: because of huge training sets, the learning phase of a neural network is very long. Therefore, the use of this protocol is only theoretical so far.
             </p>
-            <p>
-                I hear you scream: That’s what encryption is for! And you are right. The attacker would only see garbage in the sniffing tool and wouldn’t be able to reconstruct the key. But sadly, the RFID chip is much too weak for encrypting anything because you wanted to save money, remember? Sadly, this is also true for bigger companies in the real world. The chip has nearly no computational power and also only barely enough storage for its secret key. So we need another, more light-weight solution.
-                <br> <br>
-                One way to do that is to use a cryptographic protocol like the HB Protocol by Hopper and Blum [1]. This protocol makes it difficult for this attacker to extract the key.
+           
 
+            <h2 id="NKEP">Neural key exchange protocol</h2>
+            <p>The most used protocol for key exchange between two parties A and B in the practice is Diffie–Hellman key exchange protocol. Neural key exchange, which is based on the synchronization of two tree parity machines, should be a secure replacement for this method. Synchronizing these two machines is similar to synchronizing two chaotic oscillators in chaos communications.
             </p>
+            <img src="media/Tree_Parity_Machine.jpg" style="width:60%; margin-left: auto; margin-right: auto;" alt="@figure2">
             
-            
-            <h2 id="protocol">HB Protocol</h2>
+
+            <h2 id="TPM">Tree parity machine</h2>
             <p>
-                So, you have a <b>reader R </b> (the lock) and a <b>tag T </b>(your chip). T now wants to prove to R that it possesses the same secret key <b>without revealing it</b>. This is done by R repeatedly challenging T with questions only a tag with the correct secret key can answer. So far, we have seen that the single question “What is your secret key?” is insecure since this reveals too much information already. Instead, in the HB Protocol T is asked to only reveal small portions of the secret one tiny bit at a time, until R can be sure that T has the correct secret key.
+                The tree parity machine is a special type of multi-layer feedforward neural network.
+                <br>
+                It consists of one output neuron, K hidden neurons and K×N input neurons. 
+                <br>
             </p>
+            
             <p>Imagine that the secret keys of R and T are in fact both the same s=(1,0,1,0). Now R sends a random binary vector a (e.g. a=(1,0,1,1)) to T and expects T to respond back to it the scalar product b=< a,s >, which is
             </p>
-            <img src="media/exp.png" style="width:60%; margin-left: auto; margin-right: auto;" alt="@figure2">
             <p>
                 in this example. We call this a a challenge. Remember, we deal with bit arithmetic here, so the “+” is, in fact, an XOR. The multiplication is the same as in the real numbers. Or for mathematicians: we calculate in the field GF(2) or 𝔽₂, the field with 2 elements.
             </p>
-            <figure>
-                <table class="table" border="1" style="width: 30%; text-align: center; margin-left: auto;
-            margin-right: auto;">
-                <thead>
-                    <tr>
-                      <th>XOR</th>
-                      <th>0</th>
-                      <th>1</th>
-                    </tr>
-                </thead>
-    
-                <tbody>
-                    <tr class="tr">
-                      <td>0</td>
-                      <td>0</td>
-                      <td>1</td>
-                    </tr>
+
+            <h2 id="Protocol">Protocol</h2>
+            <p>
+                Each party (A and B) uses its own tree parity machine. Synchronization of the tree parity machines is achieved in these steps
+                <br>
+                <ol>
+                    <li> Initialize random weight values</li>
+                    <li> Execute these steps until the full synchronization is achieved</li>
+                    <ol>
+                        <li> Generate random input vector X  </li>
+                        <li> Compute the values of the hidden neurons</li>
+                        <li> Compute the value of the output neuron</li>
+                        <li> Compare the values of both tree parity machines</li>
+                            <ol>
+                                <li> Outputs are the same: one of the suitable learning rules is applied to the weights</li>
+                                <li> Outputs are different: go to 2.1</li>
+                            </ol>
+                    </ol>
+                </ol>
+
+            </p>
+            <p>
+                After the full synchronization is achieved (the weights wij of both tree parity machines are same), A and B can use their weights as keys.
+                <br>
+                This method is known as a bidirectional learning.
+               <br>
                 
-                    <tr class="tr">
-                      <td>1</td>
-                      <td>1</td>
-                      <td>0</td>
-                    </tr>
-                
-                </tbody>
-                </table>
-                <figcaption style="font-size: small; text-align: center;">XOR is like the normal addition for integers, just that 1+1=0.</figcaption>
-            </figure>
-            <p>R can compute the scalar product itself (it knows a and s) and checks T’s answer. If T’s answer is the same, R can be a bit more confident that T indeed has the same secret key. To increase confidence, this game is repeated several times.</p>
+            </p>
+            
             
 
-            <p> <a href="https://towardsdatascience.com/where-machine-learning-meets-cryptography-b4a23ef54c9e">
+            <p> <a href="https://en.m.wikipedia.org/wiki/Neural_cryptography">
                 click here for the rest </a>
             </p>
 
             
 
 
-            <footer class="text-muted right mb-2">
-                written by Dr. Robert Kübler on <time datetime="2020-06-09">09/06/2020</time>
-            </footer>
-
+          
 
 
         </article>
