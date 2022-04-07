@@ -426,7 +426,7 @@ hr{
 .table th{
     border-bottom: 1px solid #000000;
     padding: 0.5rem;
-    text-align: left;
+    text-align: center;
 }
 .table td{
     padding: 0.5rem;

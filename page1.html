@@ -46,8 +46,8 @@
     </header>
     <section class="hero-section hero-section-post">
         <div class="v-center vh-center">
-            <h1 class="centered">A Few Thoughts on Cryptographic Engineering</h1>
-            <p class="centered">Some random thoughts about crypto. Notes from a course I teach. Pictures of my dachshunds.</p>
+            <h1 class="centered">Where Machine Learning meets Cryptography</h1>
+            <p class="centered">Solving the cryptographically-relevant Learning Parity with Noise Problem via machine learning</p>
         </div>
     </section>
     <aside class="sidebar">
@@ -89,75 +89,116 @@
     </aside>
     <main class="main">
         <article>
-            <h2 id="introduction">I. Introduction</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro esse quia quas iste quo aperiam vel. Quas sequi
-                quisquam doloribus dolor fuga non eum distinctio necessitatibus aliquid, labore id itaque.
-                Nisi ad atque officia rerum quo exercitationem.</p>
-
             <figure class="centered">
-                <img src="media/placeholder.png" style="width:60%;" alt="@figure1">
-                <figcaption>Fig.1 – Placeholder.</figcaption>
+                <img src="media/cryptoML.png" style="width:60%;" alt="@figure1">
+                
             </figure>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro esse quia quas iste quo aperiam vel. Quas sequi
-                quisquam doloribus dolor fuga non eum distinctio necessitatibus aliquid, labore id itaque.
-                Nisi ad atque officia rerum quo exercitationem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro esse quia quas iste quo aperiam vel. Quas sequi
-                quisquam doloribus dolor fuga non eum distinctio necessitatibus aliquid, labore id itaque.
-                Nisi ad atque officia rerum quo exercitationem.</p>
+
             
-            <h2 id="biographie">II. Biographie</h2>
-            <p>Beatae cupiditate ea tempore animi provident iusto unde fugiat hic quisquam maiores accusantium libero ratione, quas, quaerat enim? Cumque adipisci distinctio dolor illum.
-            Architecto animi quisquam quam libero ipsum corrupti nulla neque amet saepe aliquid voluptatum assumenda debitis repellat minus qui quis officia inventore, explicabo dolorem tenetur eaque sapiente mollitia porro. Doloremque, eaque.
-            Laborum temporibus minima quod blanditiis officia officiis expedita illum nulla! Quaerat, officia.Reiciendis delectus, commodi labore dignissimos in unde. Eaque necessitatibus repellat at ipsum similique natus, nam minima optio a.
-            Animi, placeat earum, nostrum voluptatibus odit tempore rerum fugiat, iure iste distinctio veniam labore obcaecati dolore accusamus veritatis blanditiis at ipsam hic nulla! Voluptatem, blanditiis. Expedita officia veritatis repellat a?
-            Fugit, impedit excepturi?</p>
+            <p> When reading this, chances are that you know one or another thing about machine learning already. You know that machine learning algorithms typically take in a bunch of samples, each containing a fixed amount of features, and output a prediction in the end.
+                <br> <br>
+                What you maybe have heard about (but did not dig deeper into) is the field of cryptography. It is this mysterious subject where it’s all security, passwords, hiding things. Maybe you have even heard about AES or RSA, which are algorithms to encrypt data.
+                <br> <br>
+                But don’t worry, even if you have never dealt with cryptography before, you will be able to follow along since I will explain everything on an introductory level .
+                <br> <br>
+                In this article, I want to bring both fields together. I will present to you an easy to understand, yet hard to solve problem used to build cryptographic algorithms — the so-called Learning Parity with Noise problem, LPN for short. The “L” in LPN should ring your machine learning alarm bells already because this problem can be seen as a routine machine learning problem!
+                <br> <br>
+                But first, let us see where the LPN problem naturally arises in a cryptographic setting and how to define it. We will solve the LPN problem by using machine learning afterward.
+            </p>
+            <h2 id="motivation">Motivation</h2>
+            <p>Imagine that you own a hotel and you want to manage access to the guests’ rooms, i.e. each guest should only be able to enter their own room. Makes sense, right?
+            </p>
+            <figure class="centered">
+                <img src="media/hotel.png" style="width:60%;" alt="@figure2">
+                <figcaption>Fig.2 – Your hotel. Photo by Eiji K on Unsplash.</figcaption>
+            </figure>
+
+            <p>
+                Now, traditionally you could use normal, physical keys. The disadvantage is that people sometimes lose their keys, which means a lot of costs for your business since you have to replace the lock from the affected doors.
+                <br> <br>
+                So you decide on deploying smart cards, in particular cards with RFID (radio-frequency identification) chips, and also the corresponding locks. Since you have to provide for a lot of doors and you want to save money, you choose very weak RFID chips, i.e. chips with diminishing computational power, maybe even without its own source of electricity.
+                
+            </p>
             
-            <table class="table">
+
+            <h2 id="problem">The Problem</h2>
+            <p>The trouble with this solution begins when a guest wants to enter their room: A bad guy, usually called an attacker in cryptography, could sit in the hallway, apparently just typing innocently on their notebook. What the attacker actually does is sniffing the RFID traffic, i.e. reading the communication between the lock and the guest’s chip. If the chip sends the secret key directly, the attacker will see it, store it, forge a card containing this key and then will be able to enter the room.
+                <br> <br>
+                So, this is a bad idea. It only works if there are no bad people in the world (highly unlikely). Instead, we have to arm ourselves and improve security for our guests.
+                <br>
+                The idea is the following:
+            </p>
+            <p style="text-align: center;font-size: 14pt;">
+                "The chip somehow has to prove to the lock that it possesses the correct secret key without revealing it."
+            </p>
+            <p>
+                I hear you scream: That’s what encryption is for! And you are right. The attacker would only see garbage in the sniffing tool and wouldn’t be able to reconstruct the key. But sadly, the RFID chip is much too weak for encrypting anything because you wanted to save money, remember? Sadly, this is also true for bigger companies in the real world. The chip has nearly no computational power and also only barely enough storage for its secret key. So we need another, more light-weight solution.
+                <br> <br>
+                One way to do that is to use a cryptographic protocol like the HB Protocol by Hopper and Blum [1]. This protocol makes it difficult for this attacker to extract the key.
+
+            </p>
+            
+            
+            <h2 id="protocol">HB Protocol</h2>
+            <p>
+                So, you have a <b>reader R </b> (the lock) and a <b>tag T </b>(your chip). T now wants to prove to R that it possesses the same secret key <b>without revealing it</b>. This is done by R repeatedly challenging T with questions only a tag with the correct secret key can answer. So far, we have seen that the single question “What is your secret key?” is insecure since this reveals too much information already. Instead, in the HB Protocol T is asked to only reveal small portions of the secret one tiny bit at a time, until R can be sure that T has the correct secret key.
+            </p>
+            <p>Imagine that the secret keys of R and T are in fact both the same s=(1,0,1,0). Now R sends a random binary vector a (e.g. a=(1,0,1,1)) to T and expects T to respond back to it the scalar product b=< a,s >, which is
+            </p>
+            <img src="media/exp.png" style="width:60%; margin-left: auto; margin-right: auto;" alt="@figure2">
+            <p>
+                in this example. We call this a a challenge. Remember, we deal with bit arithmetic here, so the “+” is, in fact, an XOR. The multiplication is the same as in the real numbers. Or for mathematicians: we calculate in the field GF(2) or 𝔽₂, the field with 2 elements.
+            </p>
+            <figure>
+                <table class="table" border="1" style="width: 30%; text-align: center; margin-left: auto;
+            margin-right: auto;">
                 <thead>
                     <tr>
-                      <th>Firstname</th>
-                      <th>Lastname</th>
-                      <th>Email</th>
+                      <th>XOR</th>
+                      <th>0</th>
+                      <th>1</th>
                     </tr>
                 </thead>
     
                 <tbody>
                     <tr class="tr">
-                      <td>John</td>
-                      <td>Doe</td>
-                      <td>john@example.com</td>
+                      <td>0</td>
+                      <td>0</td>
+                      <td>1</td>
                     </tr>
                 
                     <tr class="tr">
-                      <td>Mary</td>
-                      <td>Moe</td>
-                      <td>mary@example.com</td>
+                      <td>1</td>
+                      <td>1</td>
+                      <td>0</td>
                     </tr>
                 
-                    <tr class="tr">
-                      <td>July</td>
-                      <td>Dooley</td>
-                      <td>july@example.com</td>
-                    </tr>
                 </tbody>
-            </table>
+                </table>
+                <figcaption style="font-size: small; text-align: center;">XOR is like the normal addition for integers, just that 1+1=0.</figcaption>
+            </figure>
+            <p>R can compute the scalar product itself (it knows a and s) and checks T’s answer. If T’s answer is the same, R can be a bit more confident that T indeed has the same secret key. To increase confidence, this game is repeated several times.</p>
             
-            <p>Provident autem velit doloribus culpa tempore illum harum, minima beatae odit delectus veritatis reiciendis accusantium repellendus, distinctio dicta placeat, est saepe at! Quos dignissimos delectus ipsum non?
-            Debitis repellendus quod labore recusandae quos ea sunt odit porro adipisci praesentium itaque corrupti fuga voluptate alias incidunt deserunt, enim et ducimus officiis rerum a ex aperiam dolor! Amet, blanditiis.</p>
 
-            <p>Amet deserunt veniam, mollitia nihil voluptatem ipsum porro fuga, doloremque animi accusamus iste eligendi quos ad dolores molestias voluptates omnis vitae reiciendis. Temporibus totam voluptate, harum suscipit recusandae tempora maxime.
-            Doloremque, itaque blanditiis. Asperiores dolorem totam libero id.</p>
+            <p> <a href="https://towardsdatascience.com/where-machine-learning-meets-cryptography-b4a23ef54c9e">
+                click here for the rest </a>
+            </p>
+
             
-            <h2 id="oeuvres">III. Œuvres</h2>
-            <p>Mollitia similique porro ea sed dolor sequi corrupti accusamus hic eius earum esse excepturi, obcaecati repellat facere dicta maxime nemo quidem autem?
-            Beatae reprehenderit repudiandae, dolorem labore, a quia unde rerum ea magnam dignissimos odit laborum. Corporis officiis ex rerum architecto, doloribus sed totam, dolorum ea iure nostrum, beatae hic facilis sapiente!
-            Iure sit quia corrupti eaque obcaecati beatae vel consectetur doloremque delectus similique labore ipsa aspernatur neque amet, qui mollitia nisi aliquam vitae laborum, saepe itaque culpa commodi.
-            
-            <p>Esse, mollitia officiis! Obcaecati dolor quasi repellendus harum eligendi rerum, laborum excepturi facilis qui quidem porro nulla, sapiente voluptatum nemo dolores itaque. Eligendi sed delectus porro corporis beatae iure cupiditate esse quibusdam dicta!</p>
+
+
             <footer class="text-muted right mb-2">
-                written by BRAHIM Abderrazak, on <time datetime="2022-03-30T11:31">30/03/2022 @ 11:31 PM</time>
+                written by Dr. Robert Kübler on <time datetime="2020-06-09">09/06/2020</time>
             </footer>
+
+
+
         </article>
+
         <hr>
+
+
+
         <section>
             <h2> 2 Comments: </h2>
             <form method="post" action="#" class="comment">
@@ -196,6 +237,10 @@
             </div>
         </section>
     </main>
+
+
+
+
     <footer class="footer">
         <div class="footer-col centered" style="width: 40%; padding-left: 5%;">
             <img src="media/logo.svg" height="96" class="m-0" alt="Logo">
