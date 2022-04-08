@@ -1,33 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- GENERAL META TAGS-->
+        <meta charset="UTF-8"> <!-- charset UTF-8 pour les caractères accentués correctement -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- compatibalité avec Microsoft Edge -->
+        <meta name="application-name" content="CrpytoAI"> <!-- titre du site pour les moteurs de recherche -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- pour assurer la responsivité (mobile) -->
+        <!-- FIN GENERAL META TAGS-->
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/styles.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>ML meet Crypto</title>
-    <link rel="icon" type="image/x-icon" href="/media/unknown.png">
+        <link href="css/styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="icon" type="image/x-icon" href="/media/favicon.png"> <!-- favicon: petite icon dans l'onglet -->
+        <title>Where Machine Learning meets Cryptography - CryptoAI</title>
 
-    <!-- SEO OPTIMIZATION META TAGS-->
-    <meta name="application-name" content="Site Name">
-    <meta name="language" content="French">
+        <!-- META TAGS pour les moteurs de recherches-->
+        <meta name="language" content="French"> <!-- langue d'article -->
+        <meta name="title" content="Post Title"> <!-- titre d'article -->
+        <meta name="author" content="Post Author"> <!-- auteur d'article -->
+        <meta name="description" content="Post Description"> <!-- description d'article -->
+        <meta name="keywords" content="it, computer science"> <!-- mots clés -->
+        <!-- FIN META TAGS pour les moteurs de recherches -->
 
-    <meta name="title" content="Post Title">
-    <meta name="author" content="Post Author">
-    <meta name="description" content="Post Description">
-    <meta name="keywords" content="it, computer science">
+        <!-- META TAGS OpenGraph: pour Facebook, Pintrest, LinkedIn et les cartes générés quand on partage le lien de cette page-->
+        <meta property="og:title" content="Post Title"> <!-- titre d'article -->
+        <meta property="og:description" content="Post Description"> <!-- description d'article -->
+        <meta property="og:image" content="img.jpg"> <!-- image significatif pour l'article -->
+        <!-- FIN META TAGS OpenGraph -->
+    </head>
 
-    <!-- Facebook, Pintrest, LinkedIn META TAGS-->
-    <meta property="og:title" content="Post Title">
-    <meta property="og:description" content="Post Description">
-    <meta property="og:image" content="img.jpg">
-</head>
+    <body>
+        <!-- HEADER -->
+        <header class="header fixed">
+            <nav class="navbar fixed">
+                <a class="nav-logo" href="index.html">
+                    <img src="media/logo.svg" height="42" alt="Logo">
+                </a>
+                <button class="navbar_button" id="navbutton">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul class="navbar-items" id="navbar">
+                    <li class="navbar-item"><a class="navbar-link" href="index.html#popular">Popular posts</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="index.html#all-posts">All posts</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="contact_us.html">Contact us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- FIN HEADER -->
 
 <body>
     <header class="header fixed">
@@ -45,6 +67,7 @@
             </ul>
         </nav>
     </header>
+     <!-- HERO SECTION: Presentation du page -->
     <section class="hero-section hero-section-post2">
         <div class="v-center vh-center">
             <h1 class="centered">Where Machine Learning meets Cryptography</h1>
@@ -65,21 +88,27 @@
                 <input type="search" placeholder="Artical name" class="input">
             </div>
         </div>
+        <!-- Newsletter: formulaire pour s'inscrire à la e-magazine periodique -->
         <div class="card">
             <div class="card-body">
                 <h2 class="links-header"> Newsletter: </h2>
                 <input type="text" placeholder="Your email address" class="input">
                 <input type="submit" value="Inscrire" class="btn submit">
             </div>
-        </div>
-        <div class="card">
-            <div class="card-body">
-                <h2 class="links-header"> Table of contents: </h2>
-                <ol class="links-list" style="list-style: upper-roman;">
-                    <li><a href="#introduction"> Introduction </a></li>
-                    <li><a href="#biographie"> Biographie </a></li>
-                    <li><a href="#oeuvres"> Œuvres </a></li>
-                </ol>
+        </section>
+        <!-- FIN HERO SECTION -->
+
+        <!-- ASIDE: les cartes qui décrit: infos_auteur, formulaire_newsletter, sommaire, articles similaires -->
+        <aside class="sidebar">
+            <div class="card author-card">
+                <img src="media/authors/robert_kubler.jfif" width="80" height="80" alt="@author" class="rounded">
+                <div class="author-info">
+                    <h4 class="m-0">Robert Kübler</h4> <!-- Nom d'auteur -->
+                    <p class="text-muted">PHD in cryptography, Data Scientist at METRO.digital</p> <!-- Presentation -->
+                    <p class="text-muted" style="display: inline; word-wrap: break-word;"> <!-- Email -->
+                        Email: <address style="display: inline;">robert.kuebler@rub.de</address>
+                    </p>
+                </div>
             </div>
         </div>
         <div class="card">
@@ -91,119 +120,196 @@
                     <li><a href="/page4.html">Statistical Methods in Cryptography </a></li>
                 </ul>
             </div>
-        </div>
-    </aside>
-    <main class="main">
-        <article>
-            <figure class="centered">
-                <img src="media/cryptoML.png" style="width:60%;" alt="@figure1">
+
+            <!-- Sommaire  -->
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="links-header"> Table of contents: </h2>
+                    <ol class="links-list" style="list-style: upper-roman;">
+                        <li><a href="#introduction"> Introduction </a></li>
+                        <li><a href="#motivation"> Motivation </a></li>
+                        <li><a href="#problem"> The Problem </a></li>
+                        <li><a href="#protocol"> HB Protocol </a></li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Postes similaires  -->
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="links-header"> Similar posts: </h2>
+                    <ul class="links-list">
+                        <li><a href="#">Post1</a></li>
+                        <li><a href="#">Post2</a></li>
+                        <li><a href="#">Post3</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <!-- FIN ASIDE -->
+        
+        <!-- MAIN: l'article lui-même + comments section -->
+        <main class="main">
+            <!-- ARTICLE -->
+            <article>
+                <h2 id="introduction">I. Introduction</h2>
+                <figure class="centered">
+                    <img src="media/page1/cryptoML.png" style="width:60%;" alt="@figure1">
+                    
+                </figure>
                 
-            </figure>
+                <p> When reading this, chances are that you know one or another thing about machine learning already. You know that 
+                    machine learning algorithms typically take in a bunch of samples, each containing a fixed amount of features, 
+                    and output a prediction in the end. </p>
+                <p> What you maybe have heard about (but did not dig deeper into) is the field of cryptography. It is this mysterious
+                    subject where it’s all security, passwords, hiding things. Maybe you have even heard about AES or RSA, which are
+                    algorithms to encrypt data.</p>
+                <p> But don’t worry, even if you have never dealt with cryptography before, you will be able to follow along since 
+                    I will explain everything on an introductory level .</p>
+                <p>In this article, I want to bring both fields together. I will present to you an easy to understand, yet hard to 
+                    solve problem used to build cryptographic algorithms — the so-called Learning Parity with Noise problem, 
+                    LPN for short. The “L” in LPN should ring your machine learning alarm bells already because this problem can be 
+                    seen as a routine machine learning problem!</p>
+                <p> But first, let us see where the LPN problem naturally arises in a cryptographic setting and how to define it.
+                    We will solve the LPN problem by using machine learning afterward.</p>
 
-            
-            <p> When reading this, chances are that you know one or another thing about machine learning already. You know that machine learning algorithms typically take in a bunch of samples, each containing a fixed amount of features, and output a prediction in the end.
-                <br> <br>
-                What you maybe have heard about (but did not dig deeper into) is the field of cryptography. It is this mysterious subject where it’s all security, passwords, hiding things. Maybe you have even heard about AES or RSA, which are algorithms to encrypt data.
-                <br> <br>
-                But don’t worry, even if you have never dealt with cryptography before, you will be able to follow along since I will explain everything on an introductory level .
-                <br> <br>
-                In this article, I want to bring both fields together. I will present to you an easy to understand, yet hard to solve problem used to build cryptographic algorithms — the so-called Learning Parity with Noise problem, LPN for short. The “L” in LPN should ring your machine learning alarm bells already because this problem can be seen as a routine machine learning problem!
-                <br> <br>
-                But first, let us see where the LPN problem naturally arises in a cryptographic setting and how to define it. We will solve the LPN problem by using machine learning afterward.
-            </p>
-            <h2 id="motivation">Motivation</h2>
-            <p>Imagine that you own a hotel and you want to manage access to the guests’ rooms, i.e. each guest should only be able to enter their own room. Makes sense, right?
-            </p>
-            <figure class="centered">
-                <img src="media/hotel.png" style="width:60%;" alt="@figure2">
-                <figcaption>Fig.2 – Your hotel. Photo by Eiji K on Unsplash.</figcaption>
-            </figure>
-
-            <p>
-                Now, traditionally you could use normal, physical keys. The disadvantage is that people sometimes lose their keys, which means a lot of costs for your business since you have to replace the lock from the affected doors.
-                <br> <br>
-                So you decide on deploying smart cards, in particular cards with RFID (radio-frequency identification) chips, and also the corresponding locks. Since you have to provide for a lot of doors and you want to save money, you choose very weak RFID chips, i.e. chips with diminishing computational power, maybe even without its own source of electricity.
+                <h2 id="motivation">Motivation</h2>
+                <p>Imagine that you own a hotel and you want to manage access to the guests’ rooms, i.e. each guest should 
+                    only be able to enter their own room. Makes sense, right? </p>
+                <figure class="centered">
+                    <img src="media/page1/hotel.png" style="width:60%;" alt="@figure2">
+                    <figcaption>Fig.2 – Your hotel. Photo by Eiji K on Unsplash.</figcaption>
+                </figure>
+                <p> Now, traditionally you could use normal, physical keys. The disadvantage is that people sometimes lose 
+                    their keys, which means a lot of costs for your business since you have to replace the lock from the 
+                    affected doors. </p>
+                <p> So you decide on deploying smart cards, in particular cards with RFID (radio-frequency identification) 
+                    chips, and also the corresponding locks. Since you have to provide for a lot of doors and you want to 
+                    save money, you choose very weak RFID chips, i.e. chips with diminishing computational power, maybe even 
+                    without its own source of electricity. </p>
                 
-            </p>
-            
-
-            <h2 id="problem">The Problem</h2>
-            <p>The trouble with this solution begins when a guest wants to enter their room: A bad guy, usually called an attacker in cryptography, could sit in the hallway, apparently just typing innocently on their notebook. What the attacker actually does is sniffing the RFID traffic, i.e. reading the communication between the lock and the guest’s chip. If the chip sends the secret key directly, the attacker will see it, store it, forge a card containing this key and then will be able to enter the room.
-                <br> <br>
-                So, this is a bad idea. It only works if there are no bad people in the world (highly unlikely). Instead, we have to arm ourselves and improve security for our guests.
-                <br>
-                The idea is the following:
-            </p>
-            <p style="text-align: center;font-size: 14pt;">
-                "The chip somehow has to prove to the lock that it possesses the correct secret key without revealing it."
-            </p>
-            <p>
-                I hear you scream: That’s what encryption is for! And you are right. The attacker would only see garbage in the sniffing tool and wouldn’t be able to reconstruct the key. But sadly, the RFID chip is much too weak for encrypting anything because you wanted to save money, remember? Sadly, this is also true for bigger companies in the real world. The chip has nearly no computational power and also only barely enough storage for its secret key. So we need another, more light-weight solution.
-                <br> <br>
-                One way to do that is to use a cryptographic protocol like the HB Protocol by Hopper and Blum [1]. This protocol makes it difficult for this attacker to extract the key.
-
-            </p>
-            
-            
-            <h2 id="protocol">HB Protocol</h2>
-            <p>
-                So, you have a <b>reader R </b> (the lock) and a <b>tag T </b>(your chip). T now wants to prove to R that it possesses the same secret key <b>without revealing it</b>. This is done by R repeatedly challenging T with questions only a tag with the correct secret key can answer. So far, we have seen that the single question “What is your secret key?” is insecure since this reveals too much information already. Instead, in the HB Protocol T is asked to only reveal small portions of the secret one tiny bit at a time, until R can be sure that T has the correct secret key.
-            </p>
-            <p>Imagine that the secret keys of R and T are in fact both the same s=(1,0,1,0). Now R sends a random binary vector a (e.g. a=(1,0,1,1)) to T and expects T to respond back to it the scalar product b=< a,s >, which is
-            </p>
-            <img src="media/exp.png" style="width:60%; margin-left: auto; margin-right: auto;" alt="@figure2">
-            <p>
-                in this example. We call this a a challenge. Remember, we deal with bit arithmetic here, so the “+” is, in fact, an XOR. The multiplication is the same as in the real numbers. Or for mathematicians: we calculate in the field GF(2) or 𝔽₂, the field with 2 elements.
-            </p>
-            <figure>
-                <table class="table" border="1" style="width: 30%; text-align: center; margin-left: auto;
-            margin-right: auto;">
-                <thead>
-                    <tr>
-                      <th>XOR</th>
-                      <th>0</th>
-                      <th>1</th>
-                    </tr>
-                </thead>
-    
-                <tbody>
-                    <tr class="tr">
-                      <td>0</td>
-                      <td>0</td>
-                      <td>1</td>
-                    </tr>
+                <h2 id="problem">The Problem</h2>
+                <p> The trouble with this solution begins when a guest wants to enter their room: A bad guy, usually called 
+                    an attacker in cryptography, could sit in the hallway, apparently just typing innocently on their 
+                    notebook. What the attacker actually does is sniffing the RFID traffic, i.e. reading the communication 
+                    between the lock and the guest’s chip. If the chip sends the secret key directly, the attacker will see 
+                    it, store it, forge a card containing this key and then will be able to enter the room. </p>
+                <p> So, this is a bad idea. It only works if there are no bad people in the world (highly unlikely). 
+                    Instead, we have to arm ourselves and improve security for our guests. </p>
+                <p style="margin-bottom: 0"> The idea is the following: </p>
+                <blockquote style="text-align: center; font-size: 14pt; margin-top: 0;">
+                    "The chip somehow has to prove to the lock that it possesses the correct secret key without revealing it."
+                </blockquote>
                 
-                    <tr class="tr">
-                      <td>1</td>
-                      <td>1</td>
-                      <td>0</td>
-                    </tr>
+                <p> I hear you scream: That’s what encryption is for! And you are right. The attacker would only see garbage in the sniffing tool and wouldn’t be able to reconstruct the key. But sadly, the RFID chip is much too weak for encrypting anything because you wanted to save money, remember? Sadly, this is also true for bigger companies in the real world. The chip has nearly no computational power and also only barely enough storage for its secret key. So we need another, more light-weight solution.</p>
+                <p>One way to do that is to use a cryptographic protocol like the HB Protocol by Hopper and Blum [1]. This protocol makes it difficult for this attacker to extract the key.</p>
                 
-                </tbody>
-                </table>
-                <figcaption style="font-size: small; text-align: center;">XOR is like the normal addition for integers, just that 1+1=0.</figcaption>
-            </figure>
-            <p>R can compute the scalar product itself (it knows a and s) and checks T’s answer. If T’s answer is the same, R can be a bit more confident that T indeed has the same secret key. To increase confidence, this game is repeated several times.</p>
-            
+                <h2 id="protocol">HB Protocol</h2>
+                <p> So, you have a <span class="bold">reader R </span> (the lock) and a <span class="bold">tag T </span>
+                    (your chip). T now wants to prove to R that it possesses the same secret key <span class="bold">without 
+                    revealing it</span>.This is done by R repeatedly challenging T with questions only a tag with the 
+                    correct secret key can answer. So far, we have seen that the single question “What is your secret key?” 
+                    is insecure since this reveals too much information already. Instead, in the HB Protocol T is asked 
+                    to only reveal small portions of the secret one tiny bit at a time, until R can be sure that T has the 
+                    correct secret key. </p>
+                <p> Imagine that the secret keys of R and T are in fact both the same s=(1,0,1,0). Now R sends a random 
+                    binary vector a (e.g. a=(1,0,1,1)) to T and expects T to respond back to it the scalar product 
+                    b=< a,s >, which is: </p>
 
-            <p> <a href="https://towardsdatascience.com/where-machine-learning-meets-cryptography-b4a23ef54c9e">
-                click here for the rest </a>
-            </p>
+                <img src="media/page1/exp.png" style="width:60%; margin-left: auto; margin-right: auto;" alt="@figure2">
 
-            
+                <p> In this example. We call this a a challenge. Remember, we deal with bit arithmetic here, so the “+” is, in fact,
+                    an XOR. The multiplication is the same as in the real numbers. Or for mathematicians: we calculate in the field
+                    GF(2) or 𝔽₂, the field with 2 elements. </p>
+                <figure>
+                    <table class="table" border=1 style="width: 30%; text-align: center; margin: 0 auto;">
+                        <tr>
+                            <th>XOR</th>
+                            <th>0</th>
+                            <th>1</th>
+                        </tr>
+                        <tr class="tr">
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                    
+                        <tr class="tr">
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                        </tr>
+                    </table>
+                    <figcaption style="font-size: small; text-align: center;">XOR is like the normal addition for integers, just that 1+1=0.</figcaption>
+                </figure>
 
+                <p>R can compute the scalar product itself (it knows a and s) and checks T’s answer. If T’s answer is the 
+                    same, R can be a bit more confident that T indeed has the same secret key. To increase confidence, 
+                    this game is repeated several times.</p>
+                <p class="centered"> <a href="https://towardsdatascience.com/where-machine-learning-meets-cryptography-b4a23ef54c9e">
+                    Read more </a>
+                </p>
 
-            <footer class="text-muted right mb-2">
-                written by Dr. Robert Kübler on <time datetime="2020-06-09">09/06/2020</time>
-            </footer>
+                <footer class="text-muted right mb-2">
+                    written by Dr. Robert Kübler on <time datetime="2020-06-09">09/06/2020</time>
+                </footer>
+            </article>
+            <!-- FIN ARTICLE -->
 
+            <hr> <!-- seperateur horizontal -->
 
+            <!-- Debut -->
+            <section>
+                <h2> 2 Comments: </h2>
+                <!-- CommentForm: Formulaire pour écrire un formulaire -->
+                <form method="post" action="#" class="comment">
+                    <img src="media/placeholder.png" width="64" height="64" class="rounded" alt="User Profile">
+                    <div class="comment-form" style="margin-left: 2%;">
+                        <textarea name="comment" id="comment" class="input" rows="2" placeholder="Laisser l'auteur un commentaire..." required></textarea>
+                        <input type="submit" value="Commenter" class="btn submit">
+                        <input type="reset" value="Annuler" class="btn annuler" style="margin-right: 0.5rem">
+                    </div>
+                </form>
+                <!-- Fin CommentForm -->
 
-        </article>
+                <!-- Comments list -->
+                <section class="comments-list">
+                    <!-- 1er commentaire -->
+                    <div class="comment">
+                        <img src="media/placeholder.png" width="64" height="64" class="rounded" alt="@comment1">
+                        <div class="inner-comment">
+                            <h4 style="margin: 0 0 0.25rem 2%;">MOUFDI Zakaria</h4> <!-- Nom du personne -->
+                            <p style="margin-left: 2%; margin-top: 0; margin-bottom: 0;"> <!-- Contenu du commentaire -->
+                                Mollitia similique porro ea sed dolor sequi corrupti accusamus hic eius earum esse excepturi, obcaecati
+                                repellat facere
+                                dicta maxime nemo quidem autem? Beatae reprehenderit repudiandae, dolorem labore.
+                            </p>
+                            <!-- Date et heure du commentaire -->
+                            <time style="margin-left: 2%; margin-top: 0; margin-bottom: 0;" class="text-muted"
+                                datetime="2022-03-30T11:31">30/03/2022 @ 11:31 PM</time>
+                        </div>
+                    </div>
 
-        <hr>
-
-
+                    <!-- 2éme commentaire -->
+                    <div class="comment">
+                        <img src="media/placeholder.png" width="64" height="64" class="rounded" alt="@comment1">
+                        <div class="inner-comment">
+                            <h4 style="margin: 0 0 0.25rem 2%;">MOUFDI Zakaria</h4> <!-- Nom du personne -->
+                            <p style="margin-left: 2%; margin-top: 0; margin-bottom: 0;">
+                                <!-- Contenu du commentaire -->
+                                Mollitia similique porro ea sed dolor sequi corrupti accusamus hic eius earum esse excepturi, obcaecati
+                                repellat facere
+                                dicta maxime nemo quidem autem? Beatae reprehenderit repudiandae, dolorem labore.
+                            </p>
+                            <!-- Date et heure du commentaire -->
+                            <time style="margin-left: 2%; margin-top: 0; margin-bottom: 0;" class="text-muted"
+                                datetime="2022-03-30T11:31">30/03/2022 @ 11:31 PM</time>
+                        </div>
+                    </div>
+                </section>
+                <!-- Fin CommentForm -->
+            </section>
+        </main>
 
         <section>
             <h2> 2 Comments: </h2>
@@ -246,12 +352,14 @@
 
 
 
-
+    <!-- FOOTER: possédant logo, liste des articles populaires, liste des articles choisis -->
     <footer class="footer">
+    <!-- SECTION LOGO -->
         <div class="footer-col centered" style="width: 40%; padding-left: 5%;">
             <img src="media/logo.svg" height="96" class="m-0" alt="Logo">
             <p class="m-0"> Copyright &copy; 2022 All rights reserved</p>
         </div>
+        <!-- FIN SECTION LOGO -->
         <section class="footer-col centered" style="width: 30%">
             <h4 class="bold links-header">Popular posts</h4>
             <ul class="links-list">
@@ -260,6 +368,9 @@
                 <li><a href="/page3.html" class="footer-link">Post3</a></li>
             </ul>
         </section>
+        <!-- FIN SECTION POPULAR -->
+        
+            <!-- SECTION RANDOM -->
         <section class="footer-col centered" style="width: 30%; padding-right: 20%;">
             <h4 class="bold links-header">All Posts</h4>
             <ul class="links-list">
@@ -268,12 +379,13 @@
                 <li><a href="/page3.html" class="footer-link">Post3</a></li>
                 <li><a href="/page4.html" class="footer-link">Post4</a></li>
             </ul>
-        </section>
+        </section> 
+         <!-- FIN SECTION RANDOM -->
     </footer>
-    <script>
-        document.getElementById('navbutton').onclick = () => {
-            document.getElementById('navbar').classList.toggle('show');
-        }
-    </script>
+    <!-- FIN FOOTER: possédant logo -->
+    
+    <!-- SCRIPTS: section pour inclure les scripts js -->
+    <script src="js/main.js"></script> <!-- petite script pour faire fonctionner le button navbar en mobile -->
+    <!-- FIN SCRIPTS -->
 </body>
 </html>
