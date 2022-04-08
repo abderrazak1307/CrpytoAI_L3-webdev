@@ -156,10 +156,11 @@
                     it, store it, forge a card containing this key and then will be able to enter the room. </p>
                 <p> So, this is a bad idea. It only works if there are no bad people in the world (highly unlikely). 
                     Instead, we have to arm ourselves and improve security for our guests. </p>
-                <p> The idea is the following: </p>
-                <quote style="text-align: center; font-size: 14pt;">
+                <p style="margin-bottom: 0"> The idea is the following: </p>
+                <blockquote style="text-align: center; font-size: 14pt; margin-top: 0;">
                     "The chip somehow has to prove to the lock that it possesses the correct secret key without revealing it."
-                </quote>
+                </blockquote>
+                
                 <p> I hear you scream: That’s what encryption is for! And you are right. The attacker would only see garbage in the sniffing tool and wouldn’t be able to reconstruct the key. But sadly, the RFID chip is much too weak for encrypting anything because you wanted to save money, remember? Sadly, this is also true for bigger companies in the real world. The chip has nearly no computational power and also only barely enough storage for its secret key. So we need another, more light-weight solution.</p>
                 <p>One way to do that is to use a cryptographic protocol like the HB Protocol by Hopper and Blum [1]. This protocol makes it difficult for this attacker to extract the key.</p>
                 
