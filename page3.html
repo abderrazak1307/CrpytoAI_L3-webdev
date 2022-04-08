@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>Neural cryptography</title>
+    <title>Cryptography and Artificial Intelligence</title>
     <link rel="icon" type="image/x-icon" href="/media/unknown.png">
 
     <!-- SEO OPTIMIZATION META TAGS-->
@@ -45,10 +45,10 @@
             </ul>
         </nav>
     </header>
-    <section class="hero-section hero-section-post">
+    <section class="hero-section hero-section-post3">
         <div class="v-center vh-center">
-            <h1 class="centered">Neural cryptography</h1>
-            <p class="centered">a branch of cryptography dedicated to analyzing the application of stochastic algorithms, especially artificial neural network algorithms, for use in encryption and cryptanalysis.</p>
+            <h1 class="centered">Cryptography and Artificial Intelligence</h1>
+            
         </div>
     </section>
     <aside class="sidebar">
@@ -69,9 +69,9 @@
             <div class="card-body">
                 <h2 class="links-header"> Table of contents: </h2>
                 <ol class="links-list" style="list-style: upper-roman;">
-                    <li><a href="#introduction"> Introduction </a></li>
-                    <li><a href="#biographie"> Biographie </a></li>
-                    <li><a href="#oeuvres"> Œuvres </a></li>
+                    <li><a href="#Definition"> Artificial intelligence in side-channel analysisA </a></li>
+                    <li><a href="#AIC"> Artificial intelligence in cryptanalysis </a></li>
+                    <li><a href="#BSI"> BSI project </a></li>
                 </ol>
             </div>
         </div>
@@ -80,7 +80,7 @@
                 <h2 class="links-header"> Similar posts: </h2>
                 <ul class="links-list">
                     <li><a href="/page1.html">Where Machine Learning meets Cryptography</a></li>
-                    <li><a href="/page3.html">Cryptography and Artificial Intelligence</a></li>
+                    <li><a href="/page2.html">Neural cryptography</a></li>
                     <li><a href="/page4.html">Statistical Methods in Cryptography </a></li>
                 </ul>
             </div>
@@ -88,85 +88,38 @@
     </aside>
     <main class="main">
         <article>
-
-            <h2 id="Definition">Definition</h2>
-            <p> 
-                Artificial neural networks are well known for their ability to selectively explore the solution space of a given problem. This feature finds a natural niche of application in the field of cryptanalysis. At the same time, neural networks offer a new approach to attack ciphering algorithms based on the principle that any function could be reproduced by a neural network, which is a powerful proven computational tool that can be used to find the inverse-function of any cryptographic algorithm.
-                <br>           
-                The ideas of mutual learning, self learning, and stochastic behavior of neural networks and similar algorithms can be used for different aspects of cryptography, like public-key cryptography, solving the key distribution problem using neural network mutual synchronization, hashing or generation of pseudo-random numbers.
+            <p>
+                Artificial intelligence (AI) techniques can be applied to cryptographic problems in various ways. The goal is to understand potential attacks and security guarantees of cryptographic methods and implementations in more detail. AI can be used to improve or automate attack techniques, but also to create security proofs or to uncover errors in security proofs.
                 <br>
-                Another idea is the ability of a neural network to separate space in non-linear pieces using "bias". It gives different probabilities of activating the neural network or not. This is very useful in the case of Cryptanalysis.
-                <br>
-                Two names are used to design the same domain of research: Neuro-Cryptography and Neural Cryptography.
-                <br>
-                The first work that it is known on this topic can be traced back to 1995 in an IT Master Thesis.    
+                Conversely, cryptographic techniques can also be used to reduce problems in the application of AI methods, such as methods for privacy-preserving machine learning and inference.
             </p>
-            <h2 id="application">Applications</h2>
-            <p>In 1995, Sebastien Dourlens applied neural networks to cryptanalyze DES by allowing the networks to learn how to invert the S-tables of the DES. The bias in DES studied through Differential Cryptanalysis by Adi Shamir is highlighted. The experiment shows about 50% of the key bits can be found, allowing the complete key to be found in a short time. Hardware application with multi micro-controllers have been proposed due to the easy implementation of multilayer neural networks in hardware.
+            <h2 id="Definition">Artificial intelligence in side-channel analysisA</h2>
+            <p> 
+                In the last decade the application of machine learning techniques has become firmly established especially in the field of side-channel analysis. The best results can be achieved if machine learning is combined with expert knowledge about plausible sources of side-channel leakage in the given cryptosystem. Neural networks are the most popular machine learning method employed.
                 <br>
-                One example of a public-key protocol is given by Khalil Shihab. He describes the decryption scheme and the public key creation that are based on a backpropagation neural network. The encryption scheme and the private key creation process are based on Boolean algebra. This technique has the advantage of small time and memory complexities. A disadvantage is the property of backpropagation algorithms: because of huge training sets, the learning phase of a neural network is very long. Therefore, the use of this protocol is only theoretical so far.
+                The BSI closely follows developments in this field because of its importance for the security evaluation of cryptographic implementations and also contributes to research itself. For example, a BSI team won first prize in two sub-disciplines of the international CHES-Challenge 2018 competition by combining a neural network with a SAT solver. The aim was to derive the secret key from the energy consumption of a protected AES implementation. The techniques used are widely applicable. Also in the significantly more demanding CHES-Challenge 2020, BSI won all the prizes that were finally awarded in the competition with a deep neural network.       
+            </p>
+            <h2 id="AIC">Artificial intelligence in cryptanalysis</h2>
+            <p>
+                Mathematical cryptanalysis deals with the problem of breaking cryptographic mechanisms solely by exploiting their mathematical properties. There is a variety of cryptographic mechanisms that are considered secure against this type of attack. However, this security cannot usually be strictly proven mathematically at present. The study of new methods of attack is therefore important in order to detect possible weaknesses of cryptographic mechanisms at an early stage.
+                <br>
+                The application of AI techniques to the analysis of cryptographic primitives is a recent development. The BSI was able to provide significant new impulses in this area with a contribution at the Crypto 2019. Since 2019, various other research groups have also been working on the topic in follow-up projects.    
             </p>
            
 
-            <h2 id="NKEP">Neural key exchange protocol</h2>
-            <p>The most used protocol for key exchange between two parties A and B in the practice is Diffie–Hellman key exchange protocol. Neural key exchange, which is based on the synchronization of two tree parity machines, should be a secure replacement for this method. Synchronizing these two machines is similar to synchronizing two chaotic oscillators in chaos communications.
-            </p>
-            <img src="media/Tree_Parity_Machine.jpg" style="width:60%; margin-left: auto; margin-right: auto;" alt="@figure2">
-            
-
-            <h2 id="TPM">Tree parity machine</h2>
+            <h2 id="BSI">BSI project: AI-supported analysis methods for symmetrical cryptography</h2>
             <p>
-                The tree parity machine is a special type of multi-layer feedforward neural network.
-                <br>
-                It consists of one output neuron, K hidden neurons and K×N input neurons. 
-                <br>
+                Building on the BSI results published at Crypto 2019, a team from the Ruhr University Bochum under Prof. Dr. Gregor Leander and Prof. Dr. Asja Fischer is currently investigating the possibilities of using artificial intelligence in the analysis and evaluation of symmetric primitives as part of a BSI project. One goal of the project is the development of AI-supported tools that can contribute to a security evaluation, especially of newly developed symmetrical ciphers.
             </p>
             
-            <p>Imagine that the secret keys of R and T are in fact both the same s=(1,0,1,0). Now R sends a random binary vector a (e.g. a=(1,0,1,1)) to T and expects T to respond back to it the scalar product b=< a,s >, which is
-            </p>
+
+            <h2 id="FAI">Further AI topics at BSI</h2>
             <p>
-                in this example. We call this a a challenge. Remember, we deal with bit arithmetic here, so the “+” is, in fact, an XOR. The multiplication is the same as in the real numbers. Or for mathematicians: we calculate in the field GF(2) or 𝔽₂, the field with 2 elements.
-            </p>
+                The BSI also deals with numerous AI topics beyond cryptography. The BSI considers both concrete AI systems and general AI methods and examines them in the context of IT security.
 
-            <h2 id="Protocol">Protocol</h2>
-            <p>
-                Each party (A and B) uses its own tree parity machine. Synchronization of the tree parity machines is achieved in these steps
-                <br>
-                <ol>
-                    <li> Initialize random weight values</li>
-                    <li> Execute these steps until the full synchronization is achieved</li>
-                    <ol>
-                        <li> Generate random input vector X  </li>
-                        <li> Compute the values of the hidden neurons</li>
-                        <li> Compute the value of the output neuron</li>
-                        <li> Compare the values of both tree parity machines</li>
-                            <ol>
-                                <li> Outputs are the same: one of the suitable learning rules is applied to the weights</li>
-                                <li> Outputs are different: go to 2.1</li>
-                            </ol>
-                    </ol>
-                </ol>
-
-            </p>
-            <p>
-                After the full synchronization is achieved (the weights wij of both tree parity machines are same), A and B can use their weights as keys.
-                <br>
-                This method is known as a bidirectional learning.
-               <br>
-                
             </p>
             
             
-
-            <p> <a href="https://en.m.wikipedia.org/wiki/Neural_cryptography">
-                click here for the rest </a>
-            </p>
-
-            
-
-
-          
-
 
         </article>
 

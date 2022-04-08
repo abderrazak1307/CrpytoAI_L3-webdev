@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>Neural cryptography</title>
+    <title>Statistical Methods in Cryptography</title>
     <link rel="icon" type="image/x-icon" href="/media/unknown.png">
 
     <!-- SEO OPTIMIZATION META TAGS-->
@@ -45,13 +45,24 @@
             </ul>
         </nav>
     </header>
-    <section class="hero-section hero-section-post">
+    <section class="hero-section hero-section-post4">
         <div class="v-center vh-center">
-            <h1 class="centered">Neural cryptography</h1>
-            <p class="centered">a branch of cryptography dedicated to analyzing the application of stochastic algorithms, especially artificial neural network algorithms, for use in encryption and cryptanalysis.</p>
+            <h1 class="centered">Statistical Methods in Cryptography</h1>
+            
         </div>
     </section>
     <aside class="sidebar">
+        
+        <div class="card">
+            <div class="card-body">
+                <h2 class="links-header"> PDF: </h2>
+                <p style="margin: 0.25rem 0"><i class="fa-solid " ></i> 
+                    
+                <a href="https://escholarship.org/content/qt8j949628/qt8j949628.pdf?t=prk13v&v=lg">
+                    <img src="media/pdf.png" >PDF File</a>
+                </p>
+            </div>
+        </div>
         <div class="card">
             <div class="card-body">
                 <h2 class="links-header"> Research: </h2>
@@ -65,23 +76,15 @@
                 <input type="submit" value="Inscrire" class="btn submit">
             </div>
         </div>
-        <div class="card">
-            <div class="card-body">
-                <h2 class="links-header"> Table of contents: </h2>
-                <ol class="links-list" style="list-style: upper-roman;">
-                    <li><a href="#introduction"> Introduction </a></li>
-                    <li><a href="#biographie"> Biographie </a></li>
-                    <li><a href="#oeuvres"> Œuvres </a></li>
-                </ol>
-            </div>
-        </div>
+
+        
         <div class="card">
             <div class="card-body">
                 <h2 class="links-header"> Similar posts: </h2>
                 <ul class="links-list">
                     <li><a href="/page1.html">Where Machine Learning meets Cryptography</a></li>
+                    <li><a href="/page2.html">Neural cryptography</a></li>
                     <li><a href="/page3.html">Cryptography and Artificial Intelligence</a></li>
-                    <li><a href="/page4.html">Statistical Methods in Cryptography </a></li>
                 </ul>
             </div>
         </div>
@@ -89,90 +92,18 @@
     <main class="main">
         <article>
 
-            <h2 id="Definition">Definition</h2>
+            <h2 id="abstract">Abstract</h2>
             <p> 
-                Artificial neural networks are well known for their ability to selectively explore the solution space of a given problem. This feature finds a natural niche of application in the field of cryptanalysis. At the same time, neural networks offer a new approach to attack ciphering algorithms based on the principle that any function could be reproduced by a neural network, which is a powerful proven computational tool that can be used to find the inverse-function of any cryptographic algorithm.
-                <br>           
-                The ideas of mutual learning, self learning, and stochastic behavior of neural networks and similar algorithms can be used for different aspects of cryptography, like public-key cryptography, solving the key distribution problem using neural network mutual synchronization, hashing or generation of pseudo-random numbers.
-                <br>
-                Another idea is the ability of a neural network to separate space in non-linear pieces using "bias". It gives different probabilities of activating the neural network or not. This is very useful in the case of Cryptanalysis.
-                <br>
-                Two names are used to design the same domain of research: Neuro-Cryptography and Neural Cryptography.
-                <br>
-                The first work that it is known on this topic can be traced back to 1995 in an IT Master Thesis.    
+                Cryptographic assumptions and security goals are fundamentally distributional. As a result, statistical techniques are ubiquitous in cryptographic constructions and proofs. In this thesis, we build upon existing techniques and seek to improve both theoretical and practical constructions in three fundamental primitives in cryptography: blockciphers, hash functions, and encryption schemes. First, we present a tighter hybrid argument via collision probability that is more general than previously known, allowing applications to blockciphers. We then use our result to improve the bound of the Swap-or-Not cipher. We also develop a new blockcipher composition theorem that is both class and security amplifying. Second, we prove a variant of Leftover Hash Lemma for joint leakage, inspired by the Universal Computational Extractor (UCE) assumption. We then apply this technique to construct various standard-model UCE- secure hash functions. Third, we survey existing “lossy primitives” in cryptography, in particular Lossy Trapdoor Functions (LTDF) and Lossy Encryptions (LE); we pro- pose a generalized primitive called Lossy Deterministic Encryption (LDE). We show that LDE is equivalent to LTDFs. This is in contrast with the block-box separation of trapdoor functions and public-key encryption schemes in the computational case. One common theme in our methods is the focus on statistical techniques. Another theme is that the results obtained are in contrast with their computational counterparts—the corresponding computational results are implausible or are know to be false.        
             </p>
-            <h2 id="application">Applications</h2>
-            <p>In 1995, Sebastien Dourlens applied neural networks to cryptanalyze DES by allowing the networks to learn how to invert the S-tables of the DES. The bias in DES studied through Differential Cryptanalysis by Adi Shamir is highlighted. The experiment shows about 50% of the key bits can be found, allowing the complete key to be found in a short time. Hardware application with multi micro-controllers have been proposed due to the easy implementation of multilayer neural networks in hardware.
-                <br>
-                One example of a public-key protocol is given by Khalil Shihab. He describes the decryption scheme and the public key creation that are based on a backpropagation neural network. The encryption scheme and the private key creation process are based on Boolean algebra. This technique has the advantage of small time and memory complexities. A disadvantage is the property of backpropagation algorithms: because of huge training sets, the learning phase of a neural network is very long. Therefore, the use of this protocol is only theoretical so far.
-            </p>
-           
-
-            <h2 id="NKEP">Neural key exchange protocol</h2>
-            <p>The most used protocol for key exchange between two parties A and B in the practice is Diffie–Hellman key exchange protocol. Neural key exchange, which is based on the synchronization of two tree parity machines, should be a secure replacement for this method. Synchronizing these two machines is similar to synchronizing two chaotic oscillators in chaos communications.
-            </p>
-            <img src="media/Tree_Parity_Machine.jpg" style="width:60%; margin-left: auto; margin-right: auto;" alt="@figure2">
-            
-
-            <h2 id="TPM">Tree parity machine</h2>
-            <p>
-                The tree parity machine is a special type of multi-layer feedforward neural network.
-                <br>
-                It consists of one output neuron, K hidden neurons and K×N input neurons. 
-                <br>
-            </p>
-            
-            <p>Imagine that the secret keys of R and T are in fact both the same s=(1,0,1,0). Now R sends a random binary vector a (e.g. a=(1,0,1,1)) to T and expects T to respond back to it the scalar product b=< a,s >, which is
-            </p>
-            <p>
-                in this example. We call this a a challenge. Remember, we deal with bit arithmetic here, so the “+” is, in fact, an XOR. The multiplication is the same as in the real numbers. Or for mathematicians: we calculate in the field GF(2) or 𝔽₂, the field with 2 elements.
-            </p>
-
-            <h2 id="Protocol">Protocol</h2>
-            <p>
-                Each party (A and B) uses its own tree parity machine. Synchronization of the tree parity machines is achieved in these steps
-                <br>
-                <ol>
-                    <li> Initialize random weight values</li>
-                    <li> Execute these steps until the full synchronization is achieved</li>
-                    <ol>
-                        <li> Generate random input vector X  </li>
-                        <li> Compute the values of the hidden neurons</li>
-                        <li> Compute the value of the output neuron</li>
-                        <li> Compare the values of both tree parity machines</li>
-                            <ol>
-                                <li> Outputs are the same: one of the suitable learning rules is applied to the weights</li>
-                                <li> Outputs are different: go to 2.1</li>
-                            </ol>
-                    </ol>
-                </ol>
-
-            </p>
-            <p>
-                After the full synchronization is achieved (the weights wij of both tree parity machines are same), A and B can use their weights as keys.
-                <br>
-                This method is known as a bidirectional learning.
-               <br>
-                
-            </p>
-            
-            
-
-            <p> <a href="https://en.m.wikipedia.org/wiki/Neural_cryptography">
-                click here for the rest </a>
-            </p>
-
-            
-
-
-          
-
+        
+            <footer class="text-muted right mb-2">
+                written by Dai, Wei on <time datetime="2016">2016</time>
+            </footer>
 
         </article>
 
         <hr>
-
-
 
         <section>
             <h2> 2 Comments: </h2>

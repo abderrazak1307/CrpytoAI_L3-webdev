@@ -186,6 +186,14 @@ aside {
     background: url('../media/ML.jpg') no-repeat center, linear-gradient(rgba(0,0,0,.15) 50%,rgba(0,0,0,.45));
     background-size: cover;
 }
+.hero-section-post3{
+    background: url('../media/sec.jpg') no-repeat center, linear-gradient(rgba(0,0,0,.15) 50%,rgba(0,0,0,.45));
+    background-size: cover;
+}
+.hero-section-post4{
+    background: url('../media/crypto.jpg') no-repeat center, linear-gradient(rgba(0,0,0,.15) 50%,rgba(0,0,0,.45));
+    background-size: cover;
+}
 .v-center {
     margin: 0;
     position: absolute;
@@ -380,13 +388,17 @@ aside {
     width: 45%;
     min-height: 550px;
     float: left;
-    background: url('../media/grad.jpg');
+    background: url('../media/contact.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
     padding: 3rem 2rem 2rem 4rem;
     border: 1px solid rgba(0, 0, 0, 0.15);
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contactus_sidebar h2{
+    color: #fff;
 }
 .contactus_main{
     width: 55%;
