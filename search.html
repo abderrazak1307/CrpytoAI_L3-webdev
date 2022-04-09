@@ -52,84 +52,11 @@
         <main class="main">
             <!-- POPULAR SECTION: liste des articles plus vu -->
             <section class="popular-cards" id="popular">
-                <h2>Popular posts</h2>
-                <div class="centered">
-                    <!-- 1er article (card) -->
-                    <article class="card card-zoom p-0" style="width:260px; height: 400px; margin-right: 0.5rem;">
-                        <div class="card-header"> <!-- card-header pour image (thumbnail d'article)-->
-                            <img src="media/page1/cryptoML.png" style="width:100%; height:150px" alt="@popular_post1">
-                        </div>
-                        <div class="card-body" style="text-align: left"> <!-- body pour titre et description-->
-                            <a href="page1.html"><h3>Where Machine Learning meets Cryptography</h3></a>
-                            <p>Solving the cryptographically-relevant Learning Parity with Noise Problem via machine learning</p>
-                        </div>
-                    </article>
-                    
-                    <!-- 2éme article (card) -->
-                    <article class="card card-zoom p-0" style="width:260px; height: 400px; margin-right: 0.5rem;">
-                        <div class="card-header"> <!-- card-header pour image (thumbnail d'article)-->
-                            <img src="media/page2/Tree_Parity_Machine.jpg" style="width:100%; height:150px" alt="@popular_post2">
-                        </div>
-                        <div class="card-body" style="text-align: left">
-                            <a href="page2.html"><h3>Neural Cryptography</h3></a> <!-- body pour titre et description-->
-                            <p>A branch of cryptography dedicated to analyzing the application of stochastic algorithms and artificial neural
-                            network algorithms, in encryption and cryptanalysis...</p>
-                        </div>
-                    </article>
-
-                    <!-- 3éme article (card) -->
-                    <article class="card card-zoom p-0" style="width:260px; height: 400px; margin-right: 0.5rem;">
-                        <div class="card-header"> <!-- card-header pour image (thumbnail d'article)-->
-                            <img src="media/page3/sec.jpg" style="width:100%; height:150px" alt="@popular_post3">
-                        </div>
-                        <div class="card-body" style="text-align: left"> <!-- body pour titre et description-->
-                            <a href="page3.html"><h3>Cryptography and Artificial Intelligence</h3></a>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatibus beatae beatae beatae beatae.</p>
-                        </div>
-                    </article>
-                </div>
+                <h2 id="searchResult">Search for "..."</h2>
+                <p> Not yet implemented </p>
             </section>
             <!-- FIN POPULAR SECTION -->
 
-            <!-- ALL POSTS: liste de tous les articles -->
-            <section class="all-cards" id="all-posts" style="margin-bottom: 2rem;">
-                <h2>All posts</h2>
-                <article class="mb-2">
-                    <img src="media/page1/cryptoML.png" class="thumbnail" alt="@post1">
-                    <div>
-                        <a href="page1.html"><h4 style="margin: 0 0;">Where Machine Learning meets Cryptography</h4></a>
-                        <p>Solving the cryptographically-relevant Learning Parity with Noise Problem via machine learning. 
-                            The perfect marriage between AI and Cryptography...</p>
-                    </div>
-                </article>
-                <article class="mb-2">
-                    <img src="media/page2/Tree_Parity_Machine.jpg" class="thumbnail" alt="@post2">
-                    <div>
-                        <a href="page2.html"><h4 style="margin: 0 0;">Neural Cryptography</h4></a>
-                        <p>A branch of cryptography dedicated to analyzing the application of stochastic algorithms, especially artificial neural
-                        network algorithms, for use in encryption and cryptanalysis...</p>
-                    </div>
-                </article>
-                <article class="mb-2">
-                    <img src="media/page3/sec.jpg" class="thumbnail" alt="@post3">
-                    <div>
-                        <a href="page3.html"><h4 style="margin: 0 0;">Cryptography and Artificial Intelligence</h4></a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dolor rem nihil, ex vero animi, cum
-                            excepturi iusto inventore sunt itaque sequi eum eius, eaque ducimus fuga. Odio, esse culpa...</p>
-                    </div>
-                </article>
-                <article class="mb-2">
-                    <img src="media/page4/crypto.jpg" class="thumbnail" alt="@post4">
-                    <div>
-                        <a href="page4.html">
-                            <h4 style="margin: 0 0;">Statistical Methods in Cryptography</h4>
-                        </a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dolor rem nihil, ex vero animi, cum
-                            excepturi iusto inventore sunt itaque sequi eum eius, eaque ducimus fuga. Odio, esse culpa...</p>
-                    </div>
-                </article>
-            </section>
-            <!-- FIN ALL POSTS -->
         </main>
         <!-- FIN MAIN -->
 
@@ -199,6 +126,11 @@
 
         <!-- SCRIPTS: section pour inclure les scripts js -->
         <script src="js/main.js"></script> <!-- petite script pour faire fonctionner le button navbar en mobile -->
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            document.getElementById('searchResult').innerText = `Search for '${urlParams.get('q')}'`;
+            document.getElementById('search').value = urlParams.get('q');
+        </script>
         <!-- FIN SCRIPTS -->
     </body>
 </html>

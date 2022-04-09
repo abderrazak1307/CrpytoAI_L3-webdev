@@ -1,202 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- GENERAL META TAGS-->
+        <meta charset="UTF-8"> <!-- charset UTF-8 pour les caractères accentués correctement -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- compatibalité avec Microsoft Edge -->
+        <meta name="application-name" content="CrpytoAI"> <!-- titre du site pour les moteurs de recherche -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- pour assurer la responsivité (mobile) -->
+        <!-- FIN GENERAL META TAGS-->
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/styles.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>Cryptography and Artificial Intelligence</title>
-    <link rel="icon" type="image/x-icon" href="/media/unknown.png">
+        <link href="css/styles.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="icon" type="image/x-icon" href="media/favicon.png"> <!-- favicon: petite icon dans l'onglet -->
+        <title>Cryptography and Artificial Intelligence - CryptoAI</title>
 
-    <!-- SEO OPTIMIZATION META TAGS-->
-    <meta name="application-name" content="Site Name">
-    <meta name="language" content="French">
-
-    <meta name="title" content="Post Title">
-    <meta name="author" content="Post Author">
-    <meta name="description" content="Post Description">
-    <meta name="keywords" content="it, computer science">
-
-    <!-- Facebook, Pintrest, LinkedIn META TAGS-->
-    <meta property="og:title" content="Post Title">
-    <meta property="og:description" content="Post Description">
-    <meta property="og:image" content="img.jpg">
-</head>
-
-<body>
-    <header class="header fixed">
-        <nav class="navbar fixed">
-            <a class="nav-logo" href="index.html">
-                <img src="media/logo.svg" height="42" alt="Logo">
-            </a>
-            <button class="navbar_button" id="navbutton">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <ul class="navbar-items" id="navbar">
-                <li class="navbar-item"><a class="navbar-link" href="index.html#popular">Popular posts</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="index.html#all-posts">All posts</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="contact_us.html">Contact us</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="hero-section hero-section-post3">
-        <div class="v-center vh-center">
-            <h1 class="centered">Cryptography and Artificial Intelligence</h1>
-            
-        </div>
-    </section>
-    <aside class="sidebar">
-        <div class="card">
-            <div class="card-body">
-                <h2 class="links-header"> Research: </h2>
-                <input type="search" placeholder="Artical name" class="input">
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-body">
-                <h2 class="links-header"> Newsletter: </h2>
-                <input type="text" placeholder="Your email address" class="input">
-                <input type="submit" value="Inscrire" class="btn submit">
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-body">
-                <h2 class="links-header"> Table of contents: </h2>
-                <ol class="links-list" style="list-style: upper-roman;">
-                    <li><a href="#Definition"> Artificial intelligence in side-channel analysisA </a></li>
-                    <li><a href="#AIC"> Artificial intelligence in cryptanalysis </a></li>
-                    <li><a href="#BSI"> BSI project </a></li>
-                </ol>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-body">
-                <h2 class="links-header"> Similar posts: </h2>
-                <ul class="links-list">
-                    <li><a href="/page1.html">Where Machine Learning meets Cryptography</a></li>
-                    <li><a href="/page2.html">Neural cryptography</a></li>
-                    <li><a href="/page4.html">Statistical Methods in Cryptography </a></li>
-                </ul>
-            </div>
-        </div>
-    </aside>
-    <main class="main">
-        <article>
-            <p>
-                Artificial intelligence (AI) techniques can be applied to cryptographic problems in various ways. The goal is to understand potential attacks and security guarantees of cryptographic methods and implementations in more detail. AI can be used to improve or automate attack techniques, but also to create security proofs or to uncover errors in security proofs.
-                <br>
-                Conversely, cryptographic techniques can also be used to reduce problems in the application of AI methods, such as methods for privacy-preserving machine learning and inference.
-            </p>
-            <h2 id="Definition">Artificial intelligence in side-channel analysisA</h2>
-            <p> 
-                In the last decade the application of machine learning techniques has become firmly established especially in the field of side-channel analysis. The best results can be achieved if machine learning is combined with expert knowledge about plausible sources of side-channel leakage in the given cryptosystem. Neural networks are the most popular machine learning method employed.
-                <br>
-                The BSI closely follows developments in this field because of its importance for the security evaluation of cryptographic implementations and also contributes to research itself. For example, a BSI team won first prize in two sub-disciplines of the international CHES-Challenge 2018 competition by combining a neural network with a SAT solver. The aim was to derive the secret key from the energy consumption of a protected AES implementation. The techniques used are widely applicable. Also in the significantly more demanding CHES-Challenge 2020, BSI won all the prizes that were finally awarded in the competition with a deep neural network.       
-            </p>
-            <h2 id="AIC">Artificial intelligence in cryptanalysis</h2>
-            <p>
-                Mathematical cryptanalysis deals with the problem of breaking cryptographic mechanisms solely by exploiting their mathematical properties. There is a variety of cryptographic mechanisms that are considered secure against this type of attack. However, this security cannot usually be strictly proven mathematically at present. The study of new methods of attack is therefore important in order to detect possible weaknesses of cryptographic mechanisms at an early stage.
-                <br>
-                The application of AI techniques to the analysis of cryptographic primitives is a recent development. The BSI was able to provide significant new impulses in this area with a contribution at the Crypto 2019. Since 2019, various other research groups have also been working on the topic in follow-up projects.    
-            </p>
-           
-
-            <h2 id="BSI">BSI project: AI-supported analysis methods for symmetrical cryptography</h2>
-            <p>
-                Building on the BSI results published at Crypto 2019, a team from the Ruhr University Bochum under Prof. Dr. Gregor Leander and Prof. Dr. Asja Fischer is currently investigating the possibilities of using artificial intelligence in the analysis and evaluation of symmetric primitives as part of a BSI project. One goal of the project is the development of AI-supported tools that can contribute to a security evaluation, especially of newly developed symmetrical ciphers.
-            </p>
-            
-
-            <h2 id="FAI">Further AI topics at BSI</h2>
-            <p>
-                The BSI also deals with numerous AI topics beyond cryptography. The BSI considers both concrete AI systems and general AI methods and examines them in the context of IT security.
-
-            </p>
-            
-            
-
-        </article>
-
-        <hr>
-
-
-
-        <section>
-            <h2> 2 Comments: </h2>
-            <form method="post" action="#" class="comment">
-                <img src="media/user.jpg" width="64" height="64" class="rounded" alt="User Profile">
-                <div class="comment-form" style="margin-left: 2%;">
-                    <textarea name="comment" id="comment" class="input" rows="2" placeholder="Laisser l'auteur un commentaire..." required></textarea>
-                    <input type="submit" value="Commenter" class="btn submit">
-                    <input type="reset" value="Annuler" class="btn annuler" style="margin-right: 0.5rem">
-                </div>
-            </form>
-        </section>
+        <!-- META TAGS pour les moteurs de recherches-->
+        <meta name="language" content="French"> <!-- langue d'article -->
+        <meta name="title" content="Post Title"> <!-- titre d'article -->
+        <meta name="author" content="Post Author"> <!-- auteur d'article -->
+        <meta name="description" content="Post Description"> <!-- description d'article -->
+        <meta name="keywords" content="it, computer science"> <!-- mots clés -->
+        <!-- FIN META TAGS pour les moteurs de recherches -->
         
-        <section class="comments-list">
-            <div class="comment">
-                <img src="media/user.jpg" width="64" height="64" class="rounded" alt="@comment1">
-                <div class="inner-comment">
-                    <h4 style="margin: 0 0 0.25rem 2%;">Us_er </h4>
-                    <p style="margin-left: 2%; margin-top: 0; margin-bottom: 0;">
-                        Mollitia similique porro ea sed dolor sequi corrupti accusamus hic eius earum esse excepturi, obcaecati repellat facere
-                        dicta maxime nemo quidem autem? Beatae reprehenderit repudiandae, dolorem labore.
-                    </p>
-                    <time style="margin-left: 2%; margin-top: 0; margin-bottom: 0;" class="text-muted" datetime="2022-03-30T11:31">30/03/2022 @ 11:31 PM</time>
+        <!-- META TAGS OpenGraph: pour Facebook, Pintrest, LinkedIn et les cartes générés quand on partage le lien de cette page-->
+        <meta property="og:title" content="Post Title"> <!-- titre d'article -->
+        <meta property="og:description" content="Post Description"> <!-- description d'article -->
+        <meta property="og:image" content="img.jpg"> <!-- image significatif pour l'article -->
+        <!-- FIN META TAGS OpenGraph -->
+    </head>
+
+    <body>
+        <!-- HEADER -->
+        <header class="header fixed">
+            <nav class="navbar fixed">
+                <!-- NAVBAR pour nous inclus le logo, puisque ça dirige vers home page -->
+                <a class="nav-logo" href="index.html">
+                    <img src="media/logo.svg" height="42" alt="Logo">
+                </a>
+                <button class="navbar_button" id="navbutton">
+                    <!-- Un button qui est affiché sur mobile pour ouvrir le navbar dropdown -->
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul class="navbar-items" id="navbar">
+                    <!-- Une liste des pages inline, qui se transforme en liste block en mobile -->
+                    <li class="navbar-item"><a class="navbar-link" href="index.html#popular">Popular posts</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="index.html#all-posts">All posts</a></li>
+                    <li class="navbar-item"><a class="navbar-link" href="contact_us.html">Contact us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- FIN HEADER -->
+        <section class="hero-section hero-section-post3">
+            <div class="v-center vh-center">
+                <h1 class="centered">Cryptography and Artificial Intelligence</h1>
+                
+            </div>
+        </section>
+        <aside class="sidebar">
+            <!-- Infos sur auteur -->
+            <div class="card author-card">
+                <img src="media/authors/robert_kubler.jfif" width="80" height="80" alt="@author" class="rounded">
+                <div class="author-info">
+                    <h4 class="m-0">Robert Kübler</h4> <!-- Nom d'auteur -->
+                    <p class="text-muted">PHD in cryptography, Data Scientist at METRO.digital</p> <!-- Presentation -->
+                    <p class="text-muted" style="display: inline; word-wrap: break-word;"><!-- Email -->
+                        Email: </p><address style="display: inline;">robert.kuebler@rub.de</address>
                 </div>
             </div>
-            <div class="comment">
-                <img src="media/user.jpg" width="64" height="64" class="rounded" alt="@comment2">
-                <div class="inner-comment">
-                    <h4 style="margin: 0 0 0.25rem 2%;">44u9</h4>
-                    <p style="margin-left: 2%; margin-top: 0; margin-bottom: 0;">
-                        Mollitia similique porro ea sed dolor sequi corrupti accusamus hic eius earum esse excepturi, obcaecati
-                        repellat facere
-                        dicta maxime nemo quidem autem? Beatae reprehenderit repudiandae, dolorem labore.
-                    </p>
-                    <time style="margin-left: 2%; margin-top: 0; margin-bottom: 0;" class="text-muted" datetime="2022-03-30T11:31">30/03/2022 @ 11:31 PM</time>
+
+            <!-- Barre de recherche -->
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="links-header"> Search: </h2>
+                    <input type="search" id="search" placeholder="Search..." class="input">
                 </div>
             </div>
-        </section>
-    </main>
+            
+            <!-- Newsletter: formulaire pour s'inscrire à la e-magazine periodique -->
+            <div class="card">
+                <form action="newsletter.php" method="post" class="card-body">
+                    <h2 class="links-header"> Newsletter: </h2>
+                    <input type="email" placeholder="Your email address" class="input" required>
+                    <input type="submit" value="Inscrire" class="btn submit">
+                </form>
+            </div>
 
+            <!-- Sommaire  -->
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="links-header"> Table of contents: </h2>
+                    <ol class="links-list" style="list-style: upper-roman;">
+                        <li><a href="#Definition"> Artificial intelligence in side-channel analysisA </a></li>
+                        <li><a href="#AIC"> Artificial intelligence in cryptanalysis </a></li>
+                        <li><a href="#BSI"> BSI project </a></li>
+                        <li><a href="#FAI"> Further AI topics at BSI </a></li>
+                    </ol>
+                </div>
+            </div>
 
+            <!-- Postes similaires  -->
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="links-header"> Similar posts: </h2>
+                    <ul class="links-list">
+                        <li><a href="page1.html">Where Machine Learning meets Cryptography</a></li>
+                        <li><a href="page2.html">Neural cryptography</a></li>
+                        <li><a href="page4.html">Statistical Methods in Cryptography </a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <!-- FIN ASIDE -->
+        
+        <!-- MAIN: l'article lui-même + comments section -->
+        <main class="main">
+            <article>
+                <p> Artificial intelligence (AI) techniques can be applied to cryptographic problems in various ways. The goal is to understand 
+                    potential attacks and security guarantees of cryptographic methods and implementations in more detail. AI can be used to 
+                    improve or automate attack techniques, but also to create security proofs or to uncover errors in security proofs.</p>
 
+                <p> Conversely, cryptographic techniques can also be used to reduce problems in the application of AI methods, such as methods 
+                    for privacy-preserving machine learning and inference.</p>
 
-    <footer class="footer">
-        <div class="footer-col centered" style="width: 40%; padding-left: 5%;">
-            <img src="media/logo.svg" height="96" class="m-0" alt="Logo">
-            <p class="m-0"> Copyright &copy; 2022 All rights reserved</p>
-        </div>
-        <section class="footer-col centered" style="width: 30%">
-            <h4 class="bold links-header">Popular posts</h4>
-            <ul class="links-list">
-                <li><a href="/page1.html" class="footer-link">Post1</a></li>
-                <li><a href="/page2.html" class="footer-link">Post2</a></li>
-                <li><a href="/page3.html" class="footer-link">Post3</a></li>
-            </ul>
-        </section>
-        <section class="footer-col centered" style="width: 30%; padding-right: 20%;">
-            <h4 class="bold links-header">All Posts</h4>
-            <ul class="links-list">
-                <li><a href="/page1.html" class="footer-link">Post1</a></li>
-                <li><a href="/page2.html" class="footer-link">Post2</a></li>
-                <li><a href="/page3.html" class="footer-link">Post3</a></li>
-                <li><a href="/page4.html" class="footer-link">Post4</a></li>
-                <li><a href="#" class="footer-link">Post5</a></li>
-            </ul>
-        </section>
-    </footer>
-    <script>
-        document.getElementById('navbutton').onclick = () => {
-            document.getElementById('navbar').classList.toggle('show');
-        }
-    </script>
-</body>
+                <h2 id="Definition">Artificial intelligence in side-channel analysisA</h2>
+                <p> In the last decade the application of machine learning techniques has become firmly established especially in the field of 
+                    side-channel analysis. The best results can be achieved if machine learning is combined with expert knowledge about plausible 
+                    sources of side-channel leakage in the given cryptosystem. Neural networks are the most popular machine learning method 
+                    employed.</p>
+
+                <p> The BSI closely follows developments in this field because of its importance for the security evaluation of cryptographic 
+                    implementations and also contributes to research itself. For example, a BSI team won first prize in two sub-disciplines of 
+                    the international CHES-Challenge 2018 competition by combining a neural network with a SAT solver. The aim was to derive the 
+                    secret key from the energy consumption of a protected AES implementation. The techniques used are widely applicable. Also in 
+                    the significantly more demanding CHES-Challenge 2020, BSI won all the prizes that were finally awarded in the competition 
+                    with a deep neural network. </p>
+
+                <h2 id="AIC">Artificial intelligence in cryptanalysis</h2>
+                <p> Mathematical cryptanalysis deals with the problem of breaking cryptographic mechanisms solely by exploiting their 
+                    mathematical properties. There is a variety of cryptographic mechanisms that are considered secure against this type of 
+                    attack. However, this security cannot usually be strictly proven mathematically at present. The study of new methods of 
+                    attack is therefore important in order to detect possible weaknesses of cryptographic mechanisms at an early stage. </p>
+
+                <p> The application of AI techniques to the analysis of cryptographic primitives is a recent development. The BSI was able to 
+                    provide significant new impulses in this area with a contribution at the Crypto 2019. Since 2019, various other research 
+                    groups have also been working on the topic in follow-up projects. </p>
+            
+
+                <h2 id="BSI">BSI project: AI-supported analysis methods for symmetrical cryptography</h2>
+                <p> Building on the BSI results published at Crypto 2019, a team from the Ruhr University Bochum under Prof. Dr. 
+                    Gregor Leander and Prof. Dr. Asja Fischer is currently investigating the possibilities of using artificial 
+                    intelligence in the analysis and evaluation of symmetric primitives as part of a BSI project. One goal of the 
+                    project is the development of AI-supported tools that can contribute to a security evaluation, especially of 
+                    newly developed symmetrical ciphers.</p>
+                
+
+                <h2 id="FAI">Further AI topics at BSI</h2>
+                <p> The BSI also deals with numerous AI topics beyond cryptography. The BSI considers both concrete AI systems and 
+                    general AI methods and examines them in the context of IT security. </p>
+                
+                
+
+            </article>
+            <!-- FIN ARTICLE -->
+
+            <hr> <!-- seperateur horizontal -->
+
+            <!-- Comments -->
+            <section>
+                <h2> 2 Comments: </h2>
+                <!-- CommentForm: Formulaire pour écrire un formulaire -->
+                <form method="post" action="comment.php" class="comment">
+                    <img src="media/user.jpg" width="64" height="64" class="rounded" alt="User Profile">
+                    <div class="comment-form" style="margin-left: 2%;">
+                        <textarea name="comment" id="comment" class="input" rows="2"
+                            placeholder="Laisser l'auteur un commentaire..." required></textarea>
+                        <input type="submit" value="Commenter" class="btn submit">
+                        <input type="reset" value="Annuler" class="btn annuler" style="margin-right: 0.5rem">
+                    </div>
+                </form>
+                <!-- Fin CommentForm -->
+
+                <!-- Comments list -->
+                <section class="comments-list">
+                    <!-- 1er commentaire -->
+                    <div class="comment">
+                        <img src="media/user.jpg" width="64" height="64" class="rounded" alt="@comment1">
+                        <div class="inner-comment">
+                            <h4 style="margin: 0 0 0.25rem 2%;">MOUFDI Zakaria</h4> <!-- Nom du personne -->
+                            <p style="margin-left: 2%; margin-top: 0; margin-bottom: 0;">
+                                <!-- Contenu du commentaire -->
+                                Mollitia similique porro ea sed dolor sequi corrupti accusamus hic eius earum esse excepturi,
+                                obcaecati
+                                repellat facere
+                                dicta maxime nemo quidem autem? Beatae reprehenderit repudiandae, dolorem labore.
+                            </p>
+                            <!-- Date et heure du commentaire -->
+                            <time style="margin-left: 2%; margin-top: 0; margin-bottom: 0;" class="text-muted"
+                                datetime="2022-03-30T11:31">30/03/2022 @ 11:31 PM</time>
+                        </div>
+                    </div>
+
+                    <!-- 2éme commentaire -->
+                    <div class="comment">
+                        <img src="media/user.jpg" width="64" height="64" class="rounded" alt="@comment1">
+                        <div class="inner-comment">
+                            <h4 style="margin: 0 0 0.25rem 2%;">MOUFDI Zakaria</h4> <!-- Nom du personne -->
+                            <p style="margin-left: 2%; margin-top: 0; margin-bottom: 0;">
+                                <!-- Contenu du commentaire -->
+                                Mollitia similique porro ea sed dolor sequi corrupti accusamus hic eius earum esse excepturi,
+                                obcaecati
+                                repellat facere
+                                dicta maxime nemo quidem autem? Beatae reprehenderit repudiandae, dolorem labore.
+                            </p>
+                            <!-- Date et heure du commentaire -->
+                            <time style="margin-left: 2%; margin-top: 0; margin-bottom: 0;" class="text-muted"
+                                datetime="2022-03-30T11:31">30/03/2022 @ 11:31 PM</time>
+                        </div>
+                    </div>
+                </section>
+                <!-- Fin CommentForm -->
+            </section>
+        </main>
+        <!-- FIN Main -->
+        
+        <!-- FOOTER: possédant logo, liste des articles populaires, liste des articles choisis -->
+        <footer class="footer">
+            <!-- SECTION LOGO -->
+            <div class="footer-col centered" style="width: 50%; padding-left: 5%;">
+                <img src="media/logo.svg" height="64" class="m-0" alt="Logo">
+                <p class="m-0"> Copyright &copy; 2022 All rights reserved</p>
+            </div>
+            <!-- FIN SECTION LOGO -->
+        
+            <!-- SECTION POPULAR -->
+            <section class="footer-col" style="width: 50%">
+                <h4 class="bold links-header">Popular posts</h4>
+                <ul class="links-list">
+                    <li><a href="page1.html" class="footer-link">Where Machine Learning meets Cryptography</a></li>
+                    <li><a href="page2.html" class="footer-link">Neural cryptography</a></li>
+                    <li><a href="page3.html" class="footer-link">Cryptography and Artificial Intelligence</a></li>
+                </ul>
+            </section>
+            <!-- FIN SECTION POPULAR -->
+        </footer>
+        <!-- FIN FOOTER -->
+        
+        <!-- SCRIPTS: section pour inclure les scripts js -->
+        <script src="js/main.js"></script> <!-- petite script pour faire fonctionner le button navbar en mobile -->
+        <!-- FIN SCRIPTS -->
+    </body>
 </html>

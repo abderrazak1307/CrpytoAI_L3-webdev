@@ -182,19 +182,19 @@ body{
     background-size: cover;
 }
 .hero-section-post {
-    background: url('../media/cover2.jpg') no-repeat center, linear-gradient(rgba(0,0,0,.15) 50%,rgba(0,0,0,.45));
+    background: url('../media/page1/ML.jpg') no-repeat center, linear-gradient(rgba(0, 0, 0, .15) 50%, rgba(0, 0, 0, .45));
     background-size: cover;
 }
 .hero-section-post2 {
-    background: url('../media/ML.jpg') no-repeat center, linear-gradient(rgba(0,0,0,.15) 50%,rgba(0,0,0,.45));
+    background: url('../media/page2/cover2.jpg') no-repeat center, linear-gradient(rgba(0,0,0,.15) 50%,rgba(0,0,0,.45));
     background-size: cover;
 }
 .hero-section-post3{
-    background: url('../media/sec.jpg') no-repeat center, linear-gradient(rgba(0,0,0,.15) 50%,rgba(0,0,0,.45));
+    background: url('../media/page3/sec.jpg') no-repeat center, linear-gradient(rgba(0,0,0,.15) 50%,rgba(0,0,0,.45));
     background-size: cover;
 }
 .hero-section-post4{
-    background: url('../media/crypto.jpg') no-repeat center, linear-gradient(rgba(0,0,0,.15) 50%,rgba(0,0,0,.45));
+    background: url('../media/page4/crypto.jpg') no-repeat center, linear-gradient(rgba(0,0,0,.15) 50%,rgba(0,0,0,.45));
     background-size: cover;
 }
 .v-center {
@@ -398,7 +398,7 @@ body{
     width: 45%;
     min-height: 550px;
     float: left;
-    background: url('../media/contact.jpg');
+    background: url('../media/contact_us/grad.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
@@ -450,14 +450,16 @@ hr{
     width: 100%;
 }
 .table th{
+    border: solid 1px #000;
     border-bottom: 1px solid #000000;
     padding: 0.5rem;
     text-align: center;
 }
 .table td{
+    border: solid 1px #000;
     padding: 0.5rem;
     border-bottom: 0.0000001px groove #4848483e;
 }
 .table .tr:hover {
-    background-color: #ddd9eca0;
+    background-color: #ddd9ec47;
 }
