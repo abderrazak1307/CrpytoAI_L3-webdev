@@ -1,433 +1,100 @@
+:root{ 
+    /* DECLARATION DES VARIABLES CSS POUR LES COULEURS */
+    --main-color: #4e3374;
+    --main-color-hover: #8e73b6;
+    --main-color-dark: #150728;
+    --border-color: #e6e6e600;
+}
+
 body, ::placeholder{
-    font-family: 'Poppins', 'Roboto', -apple-system, 'Segoe UI';
+    font-family: 'Poppins', 'Roboto', -apple-system, 'Segoe UI'; /* Pour applliquer la police 'Poppins', sinon 'Roboto'...etc */
 }
 *, :after, :before {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Pour changer le mode de calcul des tailles pour inclure les bordures et non pas contenu seulement */
 }
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* C'est pour ajouter une animation de défilement */
 }
 body{
-    color:#424242;
+    margin: 0; /* le body a une marge de 8px par défaut*/
+    background-color: rgb(231, 239, 245); /* couleur du l'arrière plan */
+    color:#424242; /* couleur du texte par défaut du body*/
 }
 h1, h2, h3, h4, h5, h6{
-    color:#202020;
+    color:#202020; /* couleur du texte par défaut des titres*/
 }
 a {
-    text-decoration:none;
-    color: #4e3374;
+    text-decoration:none; /* supprimer le soulignement des liens */
+    transition: 100ms; /* animation de hover dans 100ms */
+    color: var(--main-color); /* couleur du theme par défaut des liens */
 } 
 a:hover{
-    color: #8e73b6;
+    color: var(--main-color-hover); /* couleur du theme (on hover) par défaut des liens */
 }
 ul { 
-    list-style-type: none; 
-    margin: 0.5; 
-    padding: 0.5; 
+    list-style-position: inside; /* Faire rentrer les points dans les list items */ 
 } 
-body{
-    margin: 0;
-    background-color: rgb(231, 239, 245);
-}
-.author-info address{
-    word-wrap: break-word;
-}
-.main {
-    width: 75%;
-    float: left;
-    padding: 2rem 6rem 4rem;
-}
-.sidebar {
-    width: 25%;
-    float: right;
-    padding: 4rem 1rem 4rem 0;
-}
-.footer {
-    margin-top: 4rem;
-    width: 100%;
-    height: 250px;
-    clear: both;
-}
-.footer .links-header{
-    color: whitesmoke!important;
-}
-.right{
-    float: right;
-}
-.footer-col {
-    background-color: #232323;
-    padding-top: 4rem;
-    height: 100%;
-    float: left;
-}
-.footer-link{
-    color: #777;
-    transition: 80ms;
-}
-.footer-link:hover {
-    color: #fff;
-}
-@media screen and (max-width: 1200px) {
-    .main {
-        width: 70%;
-        padding: 2rem 6rem 4rem;
-    }
-
-    .sidebar {
-        width: 30%;
-        padding: 4rem 1rem 4rem 0;
-    }
-}
-@media screen and (max-width: 850px) {
-    .main {
-        width: 100%;
-        padding: 2rem 2rem 4rem;
-    }
-
-    .sidebar {
-        width: 100%;
-        padding: 2rem 2rem 4rem;
-    }
-}
-@media screen and (max-width: 600px) {
-    .main {
-        width: 100%;
-        padding: 2rem 1rem 4rem;
-    }
-
-    .sidebar {
-        width: 100%;
-        padding: 2rem 1rem 4rem;
-    }
+hr {
+    clear: both; /* assurer que c'est n'est pas blocké par des floats */
+    opacity: 0.25; /* effet de transparence */
 }
 
-.header{
-    background-color: #150728;
-    margin: 0;
-    width: 100%;
-    top: 0;
-}
-.navbar{
-    margin: 0;
-    width: 100%;
-    padding-top: 0.25rem;
-    top: 0;
-    background-color: #150728;
-}
-.fixed{
-    position: fixed;
-    z-index: 1;
-}
-.nav-logo{
-    padding-left: 4rem;
-    display: inline-block;
-}
-.navbar-items{
-    float: right;
-    margin: 0 0 0 0;
-}
-.navbar-item{
-    display: inline-block;
-    list-style-type: none;
-    padding: 0.5rem 0.5rem;
-    margin: auto 0.5em;
-}
-.navbar-link{
-    text-decoration: none;
-    color: rgb(221, 221, 221);
-}
-.navbar-link:hover{
-    color: white;
-}
-.navbar_button {
-    float: right;
-    visibility: hidden;
-    background-color: rgba(121, 121, 121, 0.5);
-    color: rgb(225, 225, 225);
-    outline: 0;
-    border: none;
-    border-radius: 5px;
-    font-size: 14pt;
-    margin: 2px 1rem 2px 2px;
-    width: 34px;
-    height: 34px;
-}
-
-@media screen and (max-width: 720px) {
-    .navbar-items {
-        clear: both;
-        float: left;
-        background-color: #0a0018;
-        width: 100%;
-        display: none;
-    }
-    .navbar-item {
-        display: block;
-    }
-    .navbar_button {
-        visibility: visible;
-    }
-}
-.show{
-    display: block;
-}
-.hero-section{
-    margin-top: 42px;
-    height: 450px;
-    padding: 0 4rem;
-    position: relative;
-}
-.hero-section-index{
-    background: url('../media/cover.jpg') no-repeat center, linear-gradient(rgba(0, 0, 0, .15) 50%, rgba(0, 0, 0, .45));
-    background-size: cover;
-}
-.hero-section-post {
-    background: url('../media/page1/ML.jpg') no-repeat center, linear-gradient(rgba(0, 0, 0, .15) 50%, rgba(0, 0, 0, .45));
-    background-size: cover;
-}
-.hero-section-post2 {
-    background: url('../media/page2/cover2.jpg') no-repeat center, linear-gradient(rgba(0,0,0,.15) 50%,rgba(0,0,0,.45));
-    background-size: cover;
-}
-.hero-section-post3{
-    background: url('../media/page3/sec.jpg') no-repeat center, linear-gradient(rgba(0,0,0,.15) 50%,rgba(0,0,0,.45));
-    background-size: cover;
-}
-.hero-section-post4{
-    background: url('../media/page4/crypto.jpg') no-repeat center, linear-gradient(rgba(0,0,0,.15) 50%,rgba(0,0,0,.45));
-    background-size: cover;
-}
-.v-center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.vh-center {
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-}
-.hero-section h1{
-    font-size: 2em;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
-    color: white;
-    margin: 0 0 0.5rem;
-}
-.hero-section p{
-    font-size: 1em;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
-    color: rgb(236, 236, 236);
-    margin-top: 0;
-}
-.links-header {
-    margin-top: 0rem;
-    margin-bottom: 0.25rem;
-}
-.links-list{
-    margin-top: 0;
-    padding-left: 1rem;
-}
-.p-0{
-    padding: 0!important;
-}
-.m-0 {
-    margin: 0 !important;
-}
-.mb-2 {
-    margin-bottom: 1rem;
-}
-
-.card{
-    display: inline-block;
-    background-color: rgb(248, 254, 255);
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
-    box-shadow: 2px 2px 8px rgba(0,0,0, 0.1);
+/** CARDS **/
+.card {
+    display: inline-block; 
+    background-color: rgb(248, 254, 255); /* couleur du l'arrière plan */
+    border: 1px solid rgba(0, 0, 0, 0.15); /* l'épaisseur du bordure et sa couleur*/
+    border-radius: 8px; /* pour avoir une bordure ronde */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* ombre du carte */ 
     width: 100%;
     padding: 1rem 0rem;
     margin-bottom: 1rem;
 }
-.card .card-header img{
-    border-radius: 8px 8px 0 0;
+.card .card-header img {
+    border-radius: 8px 8px 0 0; /* avoir une bordure ronde */
 }
-.card .card-body{
+.card .card-body {
     padding: 0rem 1.5rem;
 }
-.card .card-body h3, .card .card-body h4{
+.card .card-body h3, .card .card-body h4 {
     margin-top: 0.5rem;
     margin-bottom: 0rem;
     font-weight: 500;
 }
-.card .card-body p{
+.card .card-body p {
     margin-top: 0.25rem;
     margin-bottom: 1rem;
     font-weight: 300;
 }
-.card-zoom{
-    transition: transform 0.2s;
+
+.card-zoom {
+    transition: transform 0.2s; /* pour avoir une animation de zoom dans 0.2s */
 }
-.card-zoom:hover{
-    transform: scale(1.05);
-}
-.text-muted{
-    color: #535353;
-}
-.bold{
-    font-weight: 800!important;
+.card-zoom:hover {
+    transform: scale(1.05); /* aggrandir la carte avec 5% on hover */
 }
 
-.inner-article{
-    display: inline-block;
-    width: calc(95% - 150px);
-    height: auto;
-}
-.thumbnail{
-    float: left;
-    margin-right: 1.5rem;
-    width: 150px;
-    height: auto;
-}
-.centered{
-    text-align: center;
-}
-.rounded {
-    border-radius: 50%;
-}
-.input {
-    margin-bottom: 0.5rem;
-    padding: .25rem 0.75rem;
-    outline: none;
-    border-color: #e6e6e600;
-    border-bottom-color: #99979774;
-    background-color: #ffffff00;
-    font-size: 12pt;
-    transition: 100ms;
+/** TABLES **/
+.table {
+    border: solid 0.5px #000; /* l'épaisseur du bordure et sa couleur*/
+    border-collapse: collapse;
     width: 100%;
-    resize: none;
 }
-.input:focus {
-    border-color: #d8cee700;
-    border-bottom-color: #583a90;
-    outline: 0;
-    border-bottom-width: 0.1rem;
+.table th { /* pour les cellules du head du table */
+    border-bottom: 0.5px solid #000000; 
+    padding: 0.5rem; 
+    text-align: center; /* centrer les headers des tables */
+    background-color: rgb(34, 38, 42, 0.05); /* couleur du l'arrière plan */
 }
-
-.btn {
-    border-radius: 8px;
-    padding: 0.5rem 1rem;
-    transition: transform 80ms ease-in;
+.table td {
+    padding: 0.5rem;
+    border-bottom: 0.1px groove #4848483e;
 }
-.submit{
-    border: 1px solid #207fec;
-    background-color: #418ed6;
-    color: #ffffff;
-    float:right
-}
-.submit:hover {
-    background-color: #207fec;
-}
-.submit:active {
-    background-color: #1465c2;
-}
-.annuler {
-    border: 1px solid rgb(218, 225, 231);
-    background-color: rgba(231, 239, 245, 0.678);
-    color: #202020;
-    float:right;
-}
-.annuler:hover {
-    background-color: rgb(219, 225, 230);
-}
-.annuler:active {
-    background-color: #a7a7a7;
+.table .tr:nth-child(2n+1) { /* pour definir couleur d'arriére plan des lignes impaires */
+    background-color: rgb(34, 38, 42, 0.05); /* couleur du l'arrière plan */
 }
 
-.comment-form {
-    padding: 1%;
-    display: inline-block;
-    width: calc(100% - 96px);
-}
-
-.author-card {
-    padding: 1rem 1.5rem;
-}
-.author-card img{
-    float:left;
-}
-.author-info{
-    display: inline-block;
-    margin-left: 1.5rem;
-    width: calc(100% - 1.5rem - 80px);
-}
-.author-info h4 {
-    margin: 0;
-}
-.author-info p {
-    margin: 0;
-    font-size: 11pt;
-}
-.comment-form textarea {
-    background-color: #e3e3e347;
-}
-
-.comment{
-    padding: 1%;
-    height: 100%;
-}
-.comment > img{
-    float:left;
-}
-.inner-comment {
-    display: inline-block;
-    width: calc(99% - 64px);
-    height: 100%;
-}
-
-
-.contactus_card{
-    max-width: 1200px;
-    min-height: 550px;
-    border-radius: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    margin: 2rem auto;
-}
-
-.contactus_sidebar {
-    border-radius: 1rem 0 0 1rem;
-    width: 45%;
-    min-height: 550px;
-    float: left;
-    background: url('../media/contact_us/grad.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
-    padding: 3rem 2rem 2rem 4rem;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.contactus_sidebar h2{
-    color: #fff;
-}
-.contactus_main{
-    width: 55%;
-    min-height: 550px;
-    float: right;
-    height: 100%;
-    padding: 3rem 2rem;
-}
-@media screen and (max-width: 800px) {
-    .contactus_sidebar {
-        width: 100%;
-        border-radius: 1rem 1rem 0 0;
-    }
-    .contactus_main {
-        width: 100%;
-        border-radius: 0 0 1rem 1rem;
-    }
-}
-
+/** FORM GROUPS: pour les formulaires avec plusieurs champs **/
 .form-group {
     margin-bottom: 0.5rem;
     margin-left: 2%;
@@ -440,26 +107,382 @@ body{
     width: 48%;
     float: left;
 }
-hr{
-    clear: both;
-    opacity: 0.25;
+
+
+/** OUR INPUTS **/
+.input {
+    margin-bottom: 0.5rem; /* assurer une marge en bas */
+    padding: .25rem 0.75rem; /* espacement des bordures */
+    outline: none; /* supprimer l'outline noir */
+    border-color: var(--border-color);/* la couleur de la bordure*/
+    border-bottom-color: #99979774;
+    background-color: transparent; /* couleur du l'arrière plan */
+    font-size: 12pt;
+    transition: 100ms; /* pour avoir une animation du "bottom color" dans 100ms */
+    width: 100%;
+    resize: none;
+}
+.input:focus {
+    border-bottom-color: var(--main-color); /* couleur bordure en bas violet (en s'inspirant du material design) */
+    outline: none; /* supprimer l'outline noir */
 }
 
-.table {
-    border-collapse: collapse;
+/** Buttons **/
+.btn {
+    border-radius: 8px; /* pour avoir une bordure ronde */
+    padding: 0.5rem 1rem;
+    transition: transform 80ms ease-in; /* animation hover et active dans 80ms avec la courbe ease-in */
+}
+
+.submit {
+    border: 1px solid #207fec; /* l'épaisseur du bordure et sa couleur*/
+    background-color: #418ed6; /* couleur du l'arrière plan */
+    color: #ffffff;
+    float: right
+}
+.submit:hover {
+    background-color: #207fec; /* couleur du l'arrière plan */
+}
+
+.submit:active {
+    background-color: #1465c2; /* couleur du l'arrière plan */
+}
+
+.annuler {
+    border: 1px solid rgb(218, 225, 231); /* l'épaisseur du bordure et sa couleur*/
+    background-color: rgba(231, 239, 245, 0.678); /* couleur du l'arrière plan */
+    color: #202020;
+    float: right;
+}
+.annuler:hover {
+    background-color: rgb(219, 225, 230); /* couleur du l'arrière plan */
+}
+.annuler:active {
+    background-color: #a7a7a7; /* couleur du l'arrière plan */
+}
+
+/** author card **/
+.author-card {
+    padding: 1rem 1.5rem;
+}
+.author-card img {
+    float: left;
+}
+.author-info {
+    display: inline-block;
+    margin-left: 1.5rem;
+    width: calc(100% - 1.5rem - 80px);
+}
+.author-info h4 {
+    margin: 0;
+}
+.author-info p {
+    margin: 0;
+    font-size: 11pt;
+}
+.author-info address {
+    word-wrap: break-word;
+}
+
+/** LINKS LIST **/
+.links-header {
+    margin-top: 0rem;
+    margin-bottom: 0.25rem;
+}
+
+ul.links-list {
+    margin-top: 0;
+    padding-left: 1rem;
+}
+
+/**********************              LAYOUT GENERALE                    *********************/
+/** header **/
+.header {
+    background-color: var(--main-color-dark); /* couleur du l'arrière plan */
+    margin: 0;
+    top: 0;
+    width: 100%; /* header qui prend 100% du width du body (ou écran, car body margins = 0)*/
+}
+.navbar {
+    background-color: var(--main-color-dark); /* couleur du l'arrière plan */
+    margin: 0;
+    top: 0;
     width: 100%;
+    padding-top: 0.25rem;
 }
-.table th{
-    border: solid 1px #000;
-    border-bottom: 1px solid #000000;
-    padding: 0.5rem;
-    text-align: center;
+.fixed {
+    position: fixed; /* fixed par rapport à l'écran, donc le header défile avec l'écran */
+    z-index: 1; /* assurer que c'est affiché on top */
 }
-.table td{
-    border: solid 1px #000;
-    padding: 0.5rem;
-    border-bottom: 0.0000001px groove #4848483e;
+.nav-logo {
+    padding-left: 3rem;
+    display: inline-block; /* assurer logo et navbar-items peuvent être à la meme ligne */
 }
-.table .tr:hover {
-    background-color: #ddd9ec47;
+.navbar-items {
+    float: right; /* flotter liste des liens a droite */
+    margin: 0; /* supprimer les marges en plus */
+}
+.navbar-item {
+    display: inline-block; /* afficher au meme ligne, mais garde height et width */
+    padding: 0.5rem 0.5rem; /* espacement */
+    margin: auto 0.5em; /* marges pour espacer l'un des autres */
+}
+.navbar-link {
+    text-decoration: none;
+    color: rgb(221, 221, 221);
+}
+.navbar-link:hover {
+    color: white;
+}
+.navbar_button {
+    float: right; /* pour flotter a droite */
+    visibility: hidden;
+    background-color: rgba(121, 121, 121, 0.5); /* couleur du l'arrière plan */
+    color: rgb(225, 225, 225);
+    outline: 0; /* supprimer le outline du button*/
+    border: none; /* l'épaisseur du bordure et sa couleur*/
+    border-radius: 5px; /* pour avoir une bordure ronde */
+    font-size: 14pt; /* Taille de police pour l'icone fa-bars */ 
+    margin: 2px 1rem 2px 2px; /* espacer de la bordure de l'écran */
+    width: 34px; /* Assurer un boutton carré */ 
+    height: 34px; /* Assurer un boutton carré */
+}
+.navbar_button:hover {
+    background-color: rgba(100, 100, 100, 0.5);
+}
+.navbar_button:active{
+    background-color: rgba(66, 66, 66, 0.5);
+}
+
+/** main content **/
+.main {
+    width: 75%; /* occupe 75% du width du body */
+    float: left; /* à gauche */
+    padding: 2rem 6rem 4rem;
+}
+/** aside content **/
+.sidebar {
+    width: 25%; /* occupe 25% du width du body */
+    float: right; /* à droite */
+    padding: 4rem 1rem 4rem 0;
+}
+
+/** footer **/
+.footer {
+    clear: both; /* Assurer que le début de la liste est dans une ligne tout seul */
+    height: 200px; /* fixer la taille du container pour qu'on puisse avoir les col de même taille avec 'height: 100%' */
+}
+.footer-col {
+    background-color: #232323; /* couleur du l'arrière plan */
+    padding-top: 4rem; /* espacement en haut */
+    height: 100%; /* pour que chaque colonne prend toute les 200px */
+    float: left; /* assurer les deux colonnes soient au meme ligne */
+}
+.footer .links-header {
+    color: whitesmoke !important;
+}
+.footer a {
+    color: #777;
+}
+.footer a:hover {
+    color: #fff;
+}
+
+/** RESPONSIVENESS **/
+@media screen and (max-width: 1200px) { /* si l'écran est plus petit que 1200px */
+    .main {
+        width: 70%; /* modifier les pourcentages de width */
+        padding: 2rem 6rem 4rem; /* modifier l'espacement */
+    }
+    .sidebar {
+        width: 30%; /* modifier les pourcentages de width */
+        padding: 4rem 1rem 4rem 0; /* modifier l'espacement */
+    }
+}
+@media screen and (max-width: 850px) {/* si l'écran est plus petit que 850px */
+    /* occuper tous le width avec un espacement plus petit */
+    .main {
+        width: 100%;
+        padding: 2rem 2rem 4rem;
+    }
+    .sidebar {
+        width: 100%;
+        padding: 2rem 2rem 4rem;
+    }
+}
+@media screen and (max-width: 720px) { /* si l'écran est plus petit que 720px */
+    .navbar-items {
+        clear: both; /* Assurer que le début de la liste est dans une ligne tout seul */
+        background-color: #0a0018; /* couleur du l'arrière plan */
+        width: 100%;
+        display: none; /* Assurer que par défaut le navbar est invisible */
+    }
+    .navbar-item { /* rendre les elements de navbar de type block, chacun dans une ligne */
+        display: block;
+    }
+    .navbar_button { /* rendre le button navbar visible */
+        visibility: visible;
+    }
+}
+@media screen and (max-width: 600px) { /* si l'écran est plus petit que 600px */
+    /* Assurer que les deux navbar et le sidebar occupent 100% du width, et, qu'ils ont des paddings plus petit */
+    .main {
+        width: 100%;
+        padding: 2rem 1rem 2rem;
+    }
+    .sidebar {
+        width: 100%;
+        padding: 2rem 1rem 2rem;
+    }
+}
+
+/** HERO SECTION **/
+.hero-section {
+    margin-top: 42px; /* pour l'entête fixed, on doit laisser un margin de 42px */
+    height: 450px; /* fixer un height */
+    padding: 0 4rem;
+    position: relative; /* pour pouvoir utiliser la position absolute pour centrer les children */
+}
+.hero-section h1 {
+    font-size: 2em;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5); /* Ombre de text */
+    color: white; /* titre blanc */
+    margin: 0 0 0.5rem;/* modifier les marges */
+}
+.hero-section p {
+    font-size: 1em;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5); /* Ombre de text */
+    color: rgb(236, 236, 236); /* soutitre un peu plus grisé */
+    margin-top: 0;/* supprimer la marge en haut */
+}
+.hero-section-index {
+    /* Appliquer une image background et en haut un gradient */
+    background: linear-gradient(rgba(21, 7, 40, 1) 0%, rgba(12, 12, 12, 0.25) 50%, rgba(0, 0, 0, 0.5) 100%), url('../media/cover.jpg') no-repeat center;
+    background-size: cover;
+}
+.hero-section-post {
+    /* Appliquer une image background et en haut un gradient */
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(12, 12, 12, 0.5) 50%, rgba(0, 0, 0, 0.5) 100%), url('../media/page1/ML.jpg') no-repeat center;
+    background-size: cover;
+}
+.hero-section-post2 {
+    /* Appliquer une image background et en haut un gradient */
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(12, 12, 12, 0.5) 50%, rgba(0, 0, 0, 0.5) 100%), url('../media/page2/cover2.jpg') no-repeat center;
+    background-size: cover;
+}
+.hero-section-post3 {
+    /* Appliquer une image background et en haut un gradient */
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(12, 12, 12, 0.5) 50%, rgba(0, 0, 0, 0.5) 100%), url('../media/page3/sec.jpg') no-repeat center;
+    background-size: cover;
+}
+.hero-section-post4 {
+    /* Appliquer une image background et en haut un gradient */
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(12, 12, 12, 0.5) 50%, rgba(0, 0, 0, 0.5) 100%), url('../media/page4/crypto.jpg') no-repeat center;
+    background-size: cover;
+}
+
+/** ALL POSTS **/
+.thumbnail {
+    float: left; /* Faire flotter le thumbnail d'article à gauche */
+    margin-right: 1.5rem; /* Laisser de l'espace */
+    width: 150px;
+    height: auto;
+}
+
+/** CONTACT US **/
+.contactus_card {
+    max-width: 1200px; /* Fixer la taille max pour les grandes écrans */ 
+    min-height: 550px; /* fixer une taille minimale pour les grandes écrans (en desktop... au minimum on veut 550px) */
+    border-radius: 1rem; /*  avoir une bordure ronde */
+    border: 1px solid rgba(0, 0, 0, 0.15);/* l'épaisseur du bordure et sa couleur*/
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* ombre du card */
+    margin: 2rem auto; /* laisser de l'espace (2rem) en haut et en bas, et centrer horizontalement*/
+    background-color: whitesmoke;
+}
+.contactus_main {
+    width: 55%;
+    min-height: 550px; /* fixer une taille minimale pour les grandes écrans (en desktop... au minimum on veut 550px) */
+    float: right; /* flotter à droite */
+    padding: 3rem 2rem;
+    border-radius: 0 1rem 1rem 0;/* avoir une bordure ronde droite (haut et bas) */
+}
+.contactus_sidebar {
+    border-radius: 1rem 0 0 1rem; /* avoir une bordure ronde gauche (haut et bas */
+    width: 45%; 
+    min-height: 550px; /* fixer une taille minimale pour les grandes écrans (en desktop... au minimum on veut 550px) */
+    float: left; /* flotter à gauche */
+    background: url('../media/contact_us/grad.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff; /* couleur de text blanche car l'arrière plan est sombre */ 
+    padding: 3rem 2rem 2rem 4rem;
+    border: 1px solid rgba(0, 0, 0, 0.15); /* l'épaisseur du bordure et sa couleur*/
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+.contactus_sidebar h2 {
+    color: #fff;
+}
+/* RESPONSIVENESS */
+@media screen and (max-width: 800px) { /* si l'écran est plus petite que 800px */
+    .contactus_main {
+        width: 100%;
+        /* prend tout le width au lieu un 55% */
+        border-radius: 0 0 1rem 1rem; /*  avoir une bordure ronde en bas */
+    }
+    .contactus_sidebar {
+        width: 100%; /* prend tout le width au lieu un 45% */
+        border-radius: 1rem 1rem 0 0; /*  avoir une bordure ronde cette fois en haut */
+    }
+}
+
+/** COMMENT SECTION **/
+.comment-form {
+    display: inline-block; /* Occuper un block */
+    margin-left: 16px;
+    width: calc(100% - 80px); /* calculer width étant: 100% - la marge - photo de profile */
+}
+
+.comment {
+    margin-bottom: 1rem; /* séparer les commentaires par une marge de 1rem */
+    height: 100%;
+}
+
+.comment>img {
+    float: left; /* pour faire flotter l'image de photo de profile a gauche */
+}
+.inner-comment {
+    display: inline-block; /* Occuper un block */
+    width: calc(100% - 64px); /* Calculer pour laisser les 64px pour le photo de profile */
+}
+
+/** MISC **/
+.centered {
+    text-align: center; /* helper class pour centrer */
+}
+.bold {
+    font-weight: 800 !important; 
+    /* helper class pour avoir un text en gras, on a pas utilisé b ou strong, car les standards recommende utiliser CSS */
+}
+.text-muted {
+    color: #535353; /* helper class pour avoir une couleur grisé */
+}
+.rounded {
+    border-radius: 50%; /*  avoir une bordure ronde */
+}
+.center-V { 
+    position: absolute; /* position absolute par rapport au parent (container) */
+    top: 50%; /* positioner à 50% du parent en commencant du haut */
+    transform: translateY(-50%); /* offset par 50% du taille de l'élément lui-même vers le haut (c'est pourquoi -50%) */
+}
+.center-VH {
+    position: absolute; /* position absolute par rapport au parent (container) */
+    top: 50%; /* positioner à 50% du parent en commencant du haut */
+    left: 50%; /* positioner à 50% du parent en commencant du gauche */
+    transform: translateY(-50%) translateX(-50%); /* offset par 50% du height et width de l'élément lui-même vers le haut-gauche*/
+}
+.m-0 {
+    margin: 0 !important; /* une classe utilisé pour supprimer les marges d'un élément */
+}
+.mb {
+    margin-bottom: 1rem; /* une classe utilisé pour espacer avec une marge en bas */
 }

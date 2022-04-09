@@ -1,10 +1,15 @@
 document.getElementById('navbutton').onclick = () => {
-    document.getElementById('navbar').classList.toggle('show');
+    let display = document.getElementById('navbar').style.display;
+    if (display == 'block')
+        document.getElementById('navbar').style.display = 'none';
+    else
+        document.getElementById('navbar').style.display = 'block';
 }
 
-document.getElementById('search').onkeyup = (e) => {
-    if(e.keyCode === 13){
-        e.preventDefault();
-        location.href = 'search.html?q='+encodeURIComponent(e.target.value);
+if (document.getElementById('search'))
+    document.getElementById('search').onkeyup = (e) => {
+        if(e.keyCode === 13){
+            e.preventDefault();
+            location.href = 'search.html?q='+encodeURIComponent(e.target.value);
+        }
     }
-}

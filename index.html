@@ -13,9 +13,13 @@
         <link href="css/styles.css" rel="stylesheet"> <!-- lier notre fichier de style -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap"
+            rel="stylesheet"> <!-- Poppins font de google -->
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        <!-- Roboto font de google -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <!-- FontAwesome pour les icones -->
         <link rel="icon" type="image/x-icon" href="media/favicon.png"> <!-- favicon: petite icon dans l'onglet -->
         <title>Home page - CryptoAI</title> <!-- titre de la page -->
     </head>
@@ -40,7 +44,7 @@
 
         <!-- HERO SECTION: Presentation du site -->
         <section class="hero-section hero-section-index">
-            <div class="v-center">
+            <div class="center-V">
                 <h1>Crpytography meets AI</h1> <!-- Titre -->
                 <p style="width: 70%;">This documentary website is where Artificial Intelligence meets crpytography, we discuss everything AI, 
                     Cryptography or the marriage of these two notions</p> <!-- Slogan -->
@@ -55,7 +59,7 @@
                 <h2>Popular posts</h2>
                 <div class="centered">
                     <!-- 1er article (card) -->
-                    <article class="card card-zoom p-0" style="width:260px; height: 400px; margin-right: 0.5rem;">
+                    <article class="card card-zoom" style="padding:0; width:260px; height: 400px; vertical-align:top; margin-right: 0.5rem;">
                         <div class="card-header"> <!-- card-header pour image (thumbnail d'article)-->
                             <img src="media/page1/cryptoML.png" style="width:100%; height:150px" alt="@popular_post1">
                         </div>
@@ -66,7 +70,7 @@
                     </article>
                     
                     <!-- 2éme article (card) -->
-                    <article class="card card-zoom p-0" style="width:260px; height: 400px; margin-right: 0.5rem;">
+                    <article class="card card-zoom" style="padding:0; width:260px; height: 400px; vertical-align:top; margin-right: 0.5rem;">
                         <div class="card-header"> <!-- card-header pour image (thumbnail d'article)-->
                             <img src="media/page2/Tree_Parity_Machine.jpg" style="width:100%; height:150px" alt="@popular_post2">
                         </div>
@@ -78,13 +82,13 @@
                     </article>
 
                     <!-- 3éme article (card) -->
-                    <article class="card card-zoom p-0" style="width:260px; height: 400px; margin-right: 0.5rem;">
+                    <article class="card card-zoom" style="padding:0; width:260px; height: 400px; vertical-align:top; margin-right: 0.5rem;">
                         <div class="card-header"> <!-- card-header pour image (thumbnail d'article)-->
                             <img src="media/page3/sec.jpg" style="width:100%; height:150px" alt="@popular_post3">
                         </div>
                         <div class="card-body" style="text-align: left"> <!-- body pour titre et description-->
                             <a href="page3.html"><h3>Cryptography and Artificial Intelligence</h3></a>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda voluptatibus beatae beatae beatae beatae.</p>
+                            <p>Artificial intelligence (AI) techniques can be applied to cryptographic problems in various ways. The goal is...</p>
                         </div>
                     </article>
                 </div>
@@ -92,9 +96,9 @@
             <!-- FIN POPULAR SECTION -->
 
             <!-- ALL POSTS: liste de tous les articles -->
-            <section class="all-cards" id="all-posts" style="margin-bottom: 2rem;">
+            <section class="all-cards" id="all-posts" style="margin-bottom: 2rem; clear:both">
                 <h2>All posts</h2>
-                <article class="mb-2">
+                <article class="mb">
                     <img src="media/page1/cryptoML.png" class="thumbnail" alt="@post1">
                     <div>
                         <a href="page1.html"><h4 style="margin: 0 0;">Where Machine Learning meets Cryptography</h4></a>
@@ -102,7 +106,7 @@
                             The perfect marriage between AI and Cryptography...</p>
                     </div>
                 </article>
-                <article class="mb-2">
+                <article class="mb">
                     <img src="media/page2/Tree_Parity_Machine.jpg" class="thumbnail" alt="@post2">
                     <div>
                         <a href="page2.html"><h4 style="margin: 0 0;">Neural Cryptography</h4></a>
@@ -110,22 +114,21 @@
                         network algorithms, for use in encryption and cryptanalysis...</p>
                     </div>
                 </article>
-                <article class="mb-2">
+                <article class="mb">
                     <img src="media/page3/sec.jpg" class="thumbnail" alt="@post3">
                     <div>
                         <a href="page3.html"><h4 style="margin: 0 0;">Cryptography and Artificial Intelligence</h4></a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dolor rem nihil, ex vero animi, cum
-                            excepturi iusto inventore sunt itaque sequi eum eius, eaque ducimus fuga. Odio, esse culpa...</p>
+                        <p>Artificial intelligence (AI) techniques can be applied to cryptographic problems in various ways. The goal is to understand potential attacks and security guarantees...</p>
                     </div>
                 </article>
-                <article class="mb-2">
+                <article class="mb">
                     <img src="media/page4/crypto.jpg" class="thumbnail" alt="@post4">
                     <div>
                         <a href="page4.html">
                             <h4 style="margin: 0 0;">Statistical Methods in Cryptography</h4>
                         </a>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dolor rem nihil, ex vero animi, cum
-                            excepturi iusto inventore sunt itaque sequi eum eius, eaque ducimus fuga. Odio, esse culpa...</p>
+                        <p>Cryptographic assumptions and security goals are fundamentally distributional. As a result, statistical techniques are
+                        ubiquitous in cryptographic constructions...</p>
                     </div>
                 </article>
             </section>
@@ -188,9 +191,9 @@
             <section class="footer-col" style="width: 50%">
                 <h4 class="bold links-header">Popular posts</h4>
                 <ul class="links-list">
-                    <li><a href="page1.html" class="footer-link">Where Machine Learning meets Cryptography</a></li>
-                    <li><a href="page2.html" class="footer-link">Neural cryptography</a></li>
-                    <li><a href="page3.html" class="footer-link">Cryptography and Artificial Intelligence</a></li>
+                    <li><a href="page1.html">Where Machine Learning meets Cryptography</a></li>
+                    <li><a href="page2.html">Neural cryptography</a></li>
+                    <li><a href="page3.html">Cryptography and Artificial Intelligence</a></li>
                 </ul>
             </section>
             <!-- FIN SECTION POPULAR -->
