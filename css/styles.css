@@ -41,7 +41,7 @@ hr {
 
 /** CARDS **/
 .card {
-    display: inline-block; 
+    display: inline-block; /* pour avoir les cards sur une ligne (inline) */
     background-color: rgb(248, 254, 255); /* couleur du l'arrière plan */
     border: 1px solid rgba(0, 0, 0, 0.15); /* l'épaisseur du bordure et sa couleur*/
     border-radius: 8px; /* pour avoir une bordure ronde */
@@ -57,11 +57,13 @@ hr {
     padding: 0rem 1.5rem;
 }
 .card .card-body h3, .card .card-body h4 {
+    /* modifier les marges des header des cartes */
     margin-top: 0.5rem;
     margin-bottom: 0rem;
     font-weight: 500;
 }
 .card .card-body p {
+    /* modifier les marges des paragraphes des cartes */
     margin-top: 0.25rem;
     margin-bottom: 1rem;
     font-weight: 300;
@@ -162,36 +164,39 @@ hr {
 }
 
 /** author card **/
-.author-card {
+.author-card { /* padding spécialisé pour carte d'auteur */
     padding: 1rem 1.5rem;
 }
 .author-card img {
-    float: left;
+    float: left; /* flotter image auteur à gauche */
 }
 .author-info {
-    display: inline-block;
+    display: inline-block; /* afficher les infos en mode block sur la meme ligne */
     margin-left: 1.5rem;
-    width: calc(100% - 1.5rem - 80px);
+    width: calc(100% - 1.5rem - 80px); /* flotter image auteur à gauche */
 }
-.author-info h4 {
+.author-info h4 { 
+    /* remove spacing for auteur carte heading */
     margin: 0;
 }
 .author-info p {
+    /* remove spacing for auteur carte paragraph */
     margin: 0;
     font-size: 11pt;
 }
-.author-info address {
+.author-info address { 
+    /* break-word au cas ou ça depasse le width du container pour assurer reponsivitié */
     word-wrap: break-word;
 }
 
 /** LINKS LIST **/
-.links-header {
+.links-header { /* modifier l'espacement de links-list */
     margin-top: 0rem;
     margin-bottom: 0.25rem;
 }
 
-ul.links-list {
-    margin-top: 0;
+ul.links-list { /* modifier l'espacement de links-list */
+    margin-top: 0; 
     padding-left: 1rem;
 }
 
